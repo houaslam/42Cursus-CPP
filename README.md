@@ -1,6 +1,7 @@
 # CPP
 QUESTION = why to use private member in class? 
 ANSWER -> 
+
 QUESTION = what is difference bettween a reference and a pointer? 
 ANSWER -> 
 { 
@@ -11,6 +12,7 @@ ANSWER ->
     for the pointer , can be reasigned
     for the reference , one it refer to an object , in reasigning case it reasign the original obj
 }
+
 QUESTION = why to use a reference ? 
 ANSWER -> answer above
 QUESTION = what is an object ? 
