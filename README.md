@@ -1,8 +1,10 @@
 # CPP
-QUESTION = why to use private member in class? 
+QUESTION = why to use private member in class?
+
 ANSWER -> 
 
 QUESTION = what is difference bettween a reference and a pointer? 
+
 ANSWER -> 
 { 
     for the pointer , u should dereferencit to get the value
@@ -14,31 +16,48 @@ ANSWER ->
 }
 
 QUESTION = why to use a reference ? 
+
 ANSWER -> answer above
+
 QUESTION = what is an object ? 
+
 ANSWER -> is the type we create with a class
+
 QUESTION = what is a pointer to member ? 
+
 ANSWER = when u create a pointer and pointe on a member 
+
 QUESTION = what "this" parameter is used for? 
+
 ANSWER -> 
 { 
     It can be used to pass current object as a parameter to another method.
     It can be used to refer current class instance variable.
     It can be used to declare indexers.
 }
+
 QUESTION = why to use initialization list ?
+
 ANSWER -> in const case if we should initialize the const not assign a value to it that why we use initialization list (it initialize not assign)
+
 QUESTION = what function(parameter)const() means?
+
 ANSWER -> means the method will not modify any member variables of the class
+
 QUESTION = what is the an instance member?
+
 ANSWER -> Instance members belong to the object that they are instantiated from.
+
 QUESTION = what is the difference bettween instance and static member ?
+
 ANSWER ->
 {
     Static: Static members are shared with all objects of the class.
     Instance: Instance members belong to the object that they are instantiated from.
 }
+
 QUESTION = what is the difference bettween instance and object ?
+
 ANSWER ->
 {  
     let's say we have a class called "Car" that defines the properties and behaviors of a car
@@ -46,26 +65,31 @@ ANSWER ->
     such as "myCar," it becomes an instance of the "Car" class
     "myCar" represents a specific car with its own set of characteristics and actions.
 }
+
 QUESTION = why to use pointer to function
-ANSWER ->
-{
-    it is just like variable pointers points to the address of the first line of code in a function
-}
+
+ANSWER -> it is just like variable pointers points to the address of the first line of code in a function
+
 QUESTION = what is difference bettween function and function()?
+
 ANSWER ->
 { 
     If we add the brackets to the function name
     it becomes a function call, but without it
     we can access the address of the corresponding function
 }
+
 QUESTION = why do i need to create an object to call a pointer to memeber function ?
+
 ANSWER ->
 { 
     because member functions have a hidden "this" parameter
     and so can only be called if you supply an 
     object to play the role of "this"
 }
+
 QUESTION = what is the construction difference bettween pointer to function and pointer to memeber function ?
+
 ANSWER ->
 {
     *Declaring a pointer to an ordinary function:
@@ -83,7 +107,9 @@ ANSWER ->
 	*calling with a pointer to the object
 		result = (object_ptr->*pointer_name)(arguments); 
 }
+
 QUESTION = what are ::* | .* | ->* for ?
+
 ANSWER ->
 {
     ::* -> This operator allows us to create a pointer to a class member.
