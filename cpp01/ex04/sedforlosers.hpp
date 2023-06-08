@@ -1,28 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.hpp                                         :+:      :+:    :+:   */
+/*   sedforlosers.hpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/04 14:25:50 by houaslam          #+#    #+#             */
-/*   Updated: 2023/06/06 15:29:31 by houaslam         ###   ########.fr       */
+/*   Created: 2023/06/06 18:36:16 by houaslam          #+#    #+#             */
+/*   Updated: 2023/06/07 14:12:14 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.hpp"
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <stdio.h>
+#include <unistd.h>
 
-#ifndef HUMANA_HPP
-#define HUMANA_HPP
-
-class HumanA{
-    public :
-        std::string name;
-        Weapon& weapon;
-        void    attack(void);
-        //constructore and destructore
-        HumanA(std::string name, Weapon& weap);
-        ~HumanA(void);
-};
-
-#endif
+void    handle_line(std::string line, std::string s1, std::string s2, std::ofstream& out);

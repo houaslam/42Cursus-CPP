@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/28 13:00:18 by houaslam          #+#    #+#             */
-/*   Updated: 2023/05/30 13:50:42 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/06/08 10:45:18 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,12 @@ int Account::_nbAccounts = 0;
 int Account::_totalAmount = 0;
 int Account::_totalNbDeposits = 0;
 int Account::_totalNbWithdrawals = 0; 
+
+//Time stamps
+static void	_displayTimestamp( void )
+{
+    
+}
 
 // get functions
 int  Account::getNbAccounts( void )

@@ -1,28 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/04 14:25:50 by houaslam          #+#    #+#             */
-/*   Updated: 2023/06/06 15:29:31 by houaslam         ###   ########.fr       */
+/*   Created: 2023/06/07 17:15:24 by houaslam          #+#    #+#             */
+/*   Updated: 2023/06/08 17:57:58 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.hpp"
+#include "Harl.hpp"
 
-#ifndef HUMANA_HPP
-#define HUMANA_HPP
-
-class HumanA{
-    public :
-        std::string name;
-        Weapon& weapon;
-        void    attack(void);
-        //constructore and destructore
-        HumanA(std::string name, Weapon& weap);
-        ~HumanA(void);
-};
-
-#endif
+int main()
+{
+    std::string level;
+    Harl harl;
+    while(1)
+    {
+       std::cout << "level:";
+       std::cin >> level;
+       if(level.empty())
+		break ;
+       harl.complain(level);
+    }
+}

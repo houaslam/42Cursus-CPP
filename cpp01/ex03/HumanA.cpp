@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/04 15:26:08 by houaslam          #+#    #+#             */
-/*   Updated: 2023/06/04 18:44:02 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/06/06 15:31:10 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,15 @@
 
 void    HumanA::attack(void)
 {
-    std::cout << name << "attacks with their" <<  weapon << std::endl;
+    std::cout << name;
+    std::cout << " attacks with their ";
+    std::cout << this->weapon.getType() << std::endl;
 }
-
-HumanA::HumanA(std::string string, Weapon weap)
+HumanA::HumanA(std::string string, Weapon& ref) : name(string), weapon(ref)
 {
-    name = string;
-    weapon = weap.getType();
+   std::cout << "human constructore called" << std::endl;
 }
-
 HumanA::~HumanA(void)
 {
-    return ;
+    std::cout << "human destructore called" << std::endl;
 }
