@@ -1,5 +1,3 @@
-**# CPP
-
 QUESTION = why to use private member in class? 
 
 ANSWER -> 
@@ -26,9 +24,10 @@ ANSWER ->
 
 QUESTION = why to use a reference ? 
 
-ANSWER -> 
+ANSWER ->
 
 {
+
 	answer above
 
 }
@@ -36,9 +35,10 @@ ANSWER ->
 
 QUESTION = what is an object ? 
 
-ANSWER -> 
+ANSWER ->
 
 {
+
 	is the type we create with a class
 
 }
@@ -49,6 +49,7 @@ QUESTION = what is a pointer to member ?
 ANSWER ->
 
 {
+
 	when u create a pointer and pointe on a member 
 
 }
@@ -70,9 +71,10 @@ ANSWER ->
 
 QUESTION = why to use initialization list ?
 
-ANSWER -> 
+ANSWER ->
 
 {
+
 	in const case if we should initialize the const not assign a value to it that why we use initialization list (it initialize not assign)
 
 }
@@ -80,9 +82,10 @@ ANSWER ->
 
 QUESTION = what function(parameter)const() means?
 
-ANSWER -> 
+ANSWER ->
 
 {
+
 	means the method will not modify any member variables of the class
 
 }
@@ -90,9 +93,10 @@ ANSWER ->
 
 QUESTION = what is the an instance member?
 
-ANSWER -> 
+ANSWER ->
 
 {
+
 	Instance members belong to the object that they are instantiated from.
 
 }
@@ -198,7 +202,18 @@ ANSWER ->
 
 QUESTION = what are ::* | .* | ->* for ?
 
-ANSWER ->**
+ANSWER ->
+
+{
+
+    ::* -> This operator allows us to create a pointer to a class member.
+
+    .*  -> This operator uses the pointer to the member of a class to access the member of a class.
+
+    ->* -> This operator uses the pointer to the member of a class to access member of a class.
+
+}
+
 
 {
 
