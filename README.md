@@ -1,4 +1,4 @@
-# CPP
+**# CPP
 
 QUESTION = why to use private member in class? 
 
@@ -198,7 +198,7 @@ ANSWER ->
 
 QUESTION = what are ::* | .* | ->* for ?
 
-ANSWER ->
+ANSWER ->**
 
 {
 
