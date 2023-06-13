@@ -77,8 +77,6 @@ ANSWER ->
         result = (*pointer_name)(arguments);
     *Calling the member function on an object using a pointer-to-member-function
 		result = (object.*pointer_name)(arguments);
-	*calling with a pointer to the object
-		result = (object_ptr->*pointer_name)(arguments); 
 }
 QUESTION = what are ::* | .* | ->* for ?
 ANSWER ->
@@ -87,17 +85,39 @@ ANSWER ->
     .*  -> This operator uses the pointer to the member of a class to access the member of a class.
     ->* -> This operator uses the pointer to the member of a class to access member of a class.
 }
-QUESTION = 
+QUESTION = what is operator overload? 
+ANSWER -> 
+{
+	is the creation of a function that got a name as the operators bellow , and do the same job as the operator on arg that seems impossible like class
+}
+QUESTION = what are the operator that i can do this method on ?
 ANSWER ->
-QUESTION = 
+{
+	+ - * / = -= += += /= > < >> << <<= >>= == != <= >= ++ -- % & ^ ! | ~ &= ^= |= && || %= [] () new delete
+}
+QUESTION = how to create canonical form class?
 ANSWER ->
-QUESTION = 
+{
+	default constructor
+	copy constructor
+	parameter constructor
+	(=) operator overload
+}
+QUESTION = how to initialize a static member in a class
 ANSWER ->
-QUESTION = 
+{
+
+    the syntax : returnval classname::var = value;
+}
+QUESTION = why to initialize static var before the main?
 ANSWER ->
-QUESTION = 
-ANSWER ->
-QUESTION = 
+{
+    The static member variables in a class are shared by all the class objects
+    so we should Initializing static member variables before the main function
+    is called ensures that they have a defined value before any other code in 
+    the program uses them
+}
+QUESTION = how to convert a negative num to binary?
 ANSWER ->
 QUESTION = 
 ANSWER ->
