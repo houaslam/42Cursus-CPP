@@ -119,12 +119,22 @@ ANSWER ->
 }
 QUESTION = how to convert a negative num to binary?
 ANSWER ->
-QUESTION = 
+QUESTION = what is the floating number representation?
 ANSWER ->
-QUESTION = 
+QUESTION = why to add bias?
 ANSWER ->
-QUESTION = 
+QUESTION = why to use fixed point ?
 ANSWER ->
+{
+    first :  Fixed-point arithmetic operations can be more 
+             computationally efficient compared to floating
+             point arithmetic
+    second : Fixed-point numbers require less memory compared
+             to floating-point numbers.
+    third  : Fixed-point arithmetic ensures deterministic behavior
+             meaning that the same set of operations on the same 
+             inputs will always produce the same result.
+}
 QUESTION = 
 ANSWER ->
 QUESTION = 
