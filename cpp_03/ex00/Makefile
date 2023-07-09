@@ -11,7 +11,7 @@
 # **************************************************************************** #
 
 
-NAME = raw
+NAME = battle
 CC = c++ -fsanitize=address
 CFLAGS = -Wall -Wextra -Werror
 EXTRA_FLAGS = -std=c++98
