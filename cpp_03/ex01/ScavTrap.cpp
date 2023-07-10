@@ -19,12 +19,22 @@ ScavTrap::ScavTrap(std::string name)
     this->hit = 100;
     this->energy = 50;
     this->damage = 20;
-    std::cout <<  "ScavTrap Parameter constructore called\n";
+    std::cout <<  "ScavTrap " 
+    << this->name << " created with " 
+    << this->hit << " hit "
+    << this->energy << " energy "
+    << this->damage << " damage\n";
 }
 
 ScavTrap::ScavTrap(void)
 {
-    std::cout <<  "ScavTrap Default constructore called\n";
+    return ;
+}
+
+ScavTrap::ScavTrap(ScavTrap& tocpy)
+{
+    *this = tocpy;
+     std::cout << "ScavTrap copy constructor called\n";
 }
 
 ScavTrap::~ScavTrap(void)

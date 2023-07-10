@@ -17,12 +17,6 @@
 #define ScavTrap_HPP
 
 class ScavTrap : public ClapTrap{
-    private :
-        std::string name;
-        int hit;
-        int energy;
-        int damage;
-
     public :
         // constructor and destructore
         ScavTrap(std::string name);
@@ -32,7 +26,6 @@ class ScavTrap : public ClapTrap{
 
         //function
         void guardGate(void);
-        // ScavTrap& operator=(const ScavTrap& elem);
 };
 
 #endif

@@ -18,12 +18,12 @@ int main( void )
 	ClapTrap robin("robin");
 	ScavTrap robot("robot");
 
-	robin.printfinfo();
-	robot.printfinfo();
-	// robin.attack("cyborg");
-	// robin.takeDamage(3);
-	// robin.beRepaired(3);
-	// robin.takeDamage(3);
+	// robin.printfinfo();
+	// robot.printfinfo();
+	robin.attack("cyborg");
+	robin.takeDamage(3);
+	robin.beRepaired(3);
+	robin.takeDamage(3);
 	robot.attack("cyborg");
 	robot.takeDamage(3);
 	robot.beRepaired(3);

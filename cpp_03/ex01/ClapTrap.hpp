@@ -16,7 +16,7 @@
 #define CLAPTRAP_HPP
 
 class ClapTrap{
-    private :
+    protected :
         std::string name;
         int hit;
         int energy;
@@ -30,13 +30,6 @@ class ClapTrap{
         ~ClapTrap(void);
 
         //function
-        void printfinfo(void)
-        {
-            std::cout << "name : " << this->name  << std::endl
-            << "hit : " << this->hit << std::endl
-            << "energy : " << this->energy  << std::endl
-            << "damage : " << this->damage << std::endl;
-        }
         void attack(const std::string& target);
         void takeDamage(unsigned int amount);
         void beRepaired(unsigned int amount);

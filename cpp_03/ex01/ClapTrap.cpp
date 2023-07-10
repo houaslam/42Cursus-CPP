@@ -19,12 +19,16 @@ ClapTrap::ClapTrap(std::string name)
     this->hit = 10;
     this->energy = 10;
     this->damage = 0;
-    std::cout <<  "ClapTrap Parameter constructore called\n";
+    std::cout <<  "ClapTrap " 
+    << this->name << " created with " 
+    << this->hit << " hit "
+    << this->energy << " energy "
+    << this->damage << " damage\n";
 }
 
 ClapTrap::ClapTrap(void)
 {
-    std::cout <<  "ClapTrap Default constructore called\n";
+    return ;
 }
 
 ClapTrap::~ClapTrap(void)
