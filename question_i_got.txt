@@ -135,8 +135,14 @@ ANSWER ->
              meaning that the same set of operations on the same 
              inputs will always produce the same result.
 }
-QUESTION = 
+QUESTION = What is the difference bettween normal function and operator function?
 ANSWER ->
+{
+    Operator functions are the same as normal functions. The only differences are,
+    that the name of an operator function is always the operator keyword followed 
+    by the symbol of the operator
+    and operator functions are called when the corresponding operator is used. 
+}
 QUESTION = 
 ANSWER ->
 QUESTION = 

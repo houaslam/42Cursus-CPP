@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/28 13:00:18 by houaslam          #+#    #+#             */
-/*   Updated: 2023/06/08 10:45:18 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/06/23 15:51:38 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,10 @@ int Account::_totalNbWithdrawals = 0;
 //Time stamps
 static void	_displayTimestamp( void )
 {
-    
+    std::cout << "[";
+    std::cout << "19920104";
+    std::cout << "_";
+    std::cout << "091532] ";
 }
 
 // get functions
