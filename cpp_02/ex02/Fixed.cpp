@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/12 10:42:51 by houaslam          #+#    #+#             */
-/*   Updated: 2023/06/26 15:50:19 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/07/13 10:44:22 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -163,13 +163,13 @@ int Fixed::operator!=(Fixed &elem )
         return (0);
 }
 
-Fixed &min(Fixed &elem , Fixed &other)
+Fixed &Fixed::min(Fixed &elem , Fixed &other)
 {
     if(elem.getRawBits() < other.getRawBits())
         return(elem);
     return(other);
 }
-Fixed &max(const Fixed &elem , const Fixed &other)
+Fixed &Fixed::&max(Fixed &elem , const Fixed &other)
 {
     if(elem.getRawBits() > other.getRawBits())
         return(elem);

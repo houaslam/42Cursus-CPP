@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/07 17:15:24 by houaslam          #+#    #+#             */
-/*   Updated: 2023/06/08 17:57:58 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/07/22 11:11:29 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ int main()
     while(1)
     {
        std::cout << "level:";
-       std::cin >> level;
-       if(level.empty())
-		break ;
+       std::getline(std::cin, level);
+       if (std::cin.eof())
+            exit(0);
        harl.complain(level);
     }
 }

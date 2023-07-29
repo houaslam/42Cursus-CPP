@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 18:53:10 by houaslam          #+#    #+#             */
-/*   Updated: 2023/05/30 17:56:52 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/07/13 12:21:07 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,25 @@
 #include <cstring>
 
 class   Contact{
-public :
+private :
     int     index;
     std::string phone_num;
     std::string first_name;
     std::string last_name;
     std::string nickname;
     std::string darkest_secret;
+public :
+    void    set_it(std::string str, int k);
+    void    set_i(int i);
+    void    check(std::string  str, int k);
+    void    display(void);
 };
 
 class   PhoneBook{
-    Contact contacts[9];
+    private : 
+        Contact contacts[9];
     public :
-    void add(Contact *contacts);
-    void search(Contact *contacts);
-    Contact    *get_contact(void);
+        void search(Contact *contacts);
+        void add(Contact *contacts);
+        Contact    *get_contact(void);
 };

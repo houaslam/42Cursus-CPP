@@ -6,12 +6,12 @@
 #    By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/31 15:30:26 by houaslam          #+#    #+#              #
-#    Updated: 2023/05/31 15:57:28 by houaslam         ###   ########.fr        #
+#    Updated: 2023/07/22 10:29:38 by houaslam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = zombie
-CC = c++ -fsanitize=address
+CC = c++ #-fsanitize=address
 CFLAGS = -Wall -Wextra -Werror
 EXTRA_FLAGS = -std=c++98
 

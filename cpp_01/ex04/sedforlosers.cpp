@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 18:36:10 by houaslam          #+#    #+#             */
-/*   Updated: 2023/06/07 17:13:46 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/07/22 11:04:15 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,4 @@ void    handle_line(std::string line, std::string s1, std::string s2, std::ofstr
         i = line.find(s1);
         b++;
     }
-    std::cout << std::endl;
 }

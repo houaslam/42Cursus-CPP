@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 15:37:23 by houaslam          #+#    #+#             */
-/*   Updated: 2023/05/31 16:54:15 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/07/22 16:05:05 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 int main(void)
 {
     Zombie *someone;
-    someone = zombieHorde(10, "Zombie\n" );
+    someone = zombieHorde(0, "Zombie" );
+    if (!someone)
+        return(1);
     delete[] someone;
 }

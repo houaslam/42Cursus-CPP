@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 18:28:06 by houaslam          #+#    #+#             */
-/*   Updated: 2023/06/06 18:24:22 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/07/25 06:51:10 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,7 @@ void Weapon::setType(std::string weapon)
 
 Weapon::Weapon(std::string weapon)
 {
-    if(weapon.empty())
-    {
-        std::cout << "here " << std::endl;
-        this->weapon = "";
-    }
-    else
-        this->weapon = weapon;
+    this->weapon = weapon;
     std::cout << "weapon constructore called" << std::endl;
 }
 Weapon::Weapon(void)

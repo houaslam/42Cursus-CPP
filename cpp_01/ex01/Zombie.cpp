@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 15:31:31 by houaslam          #+#    #+#             */
-/*   Updated: 2023/05/31 16:53:58 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/07/22 09:28:18 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 Zombie::Zombie( std::string zombie )
 {
     name = zombie;
-    std::cout << name << " is created\n";
+    std::cout << name << " is back to life\n";
 }
 
 Zombie::Zombie( void )

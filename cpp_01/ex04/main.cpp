@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 18:36:14 by houaslam          #+#    #+#             */
-/*   Updated: 2023/06/07 17:13:17 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/07/22 11:01:19 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,11 @@ int main(int ac, char **av)
     {
         s1 = av[2];
         s2 = av[3];
+        if (s1.empty())
+        {
+            std::cout << "ERROR\n";
+            exit(1);
+        }
         add = ".replace";
         std::ofstream out;
         out.open(av[1] + add);
@@ -35,7 +40,6 @@ int main(int ac, char **av)
             file.close();
         }
         else
-            std::cout << "ERROR\n";
-            
+            std::cout << "ERROR\n";  
     }
 }
