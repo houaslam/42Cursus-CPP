@@ -5,29 +5,24 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/01 18:24:56 by houaslam          #+#    #+#             */
-/*   Updated: 2023/06/06 15:02:19 by houaslam         ###   ########.fr       */
+/*   Created: 2023/08/04 10:21:16 by houaslam          #+#    #+#             */
+/*   Updated: 2023/08/04 17:33:40 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <string>
-#include <cstring>
 #ifndef WEAPON_HPP
 #define WEAPON_HPP
+#include <iostream>
 
 class Weapon{
-  private :
-    std::string weapon;
-
-  public :
-    const std::string& getType(void);
-    void setType(std::string);
-
-    //constructor and destructor
-    Weapon(std::string weapon);
-    Weapon(void);
-    ~Weapon(void);
+private :
+    std::string type;
+public :
+	const std::string& getType(void);
+	void setType(std::string type);
+	//constructore
+	Weapon(std::string name);
+	~Weapon();
 };
 
 #endif

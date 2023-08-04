@@ -15,7 +15,7 @@ ANSWER -> answer above
 QUESTION = what is an object ? 
 ANSWER -> is the type we create with a class
 QUESTION = what is a pointer to member ? 
-ANSWER = when u create a pointer and pointe on a member 
+ANSWER = when u create a pointer and point on a member 
 QUESTION = what "this" parameter is used for? 
 ANSWER -> 
 { 

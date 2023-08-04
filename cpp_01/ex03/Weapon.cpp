@@ -5,35 +5,27 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/01 18:28:06 by houaslam          #+#    #+#             */
-/*   Updated: 2023/07/25 06:51:10 by houaslam         ###   ########.fr       */
+/*   Created: 2023/08/04 10:25:23 by houaslam          #+#    #+#             */
+/*   Updated: 2023/08/04 17:36:19 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Weapon.hpp"
 
-const std::string& Weapon::getType(void)
+const std::string&    Weapon::getType(void)
 {
-    return(this->weapon);
+    return (this->type);
 }
 
-void Weapon::setType(std::string weapon)
+void    Weapon::setType(std::string type)
 {
-    this->weapon = weapon;
+    this->type = type;
 }
 
-//constructor and destructor
-
-Weapon::Weapon(std::string weapon)
+Weapon::Weapon(std::string name)
 {
-    this->weapon = weapon;
-    std::cout << "weapon constructore called" << std::endl;
+    this->type = name;
 }
-Weapon::Weapon(void)
-{
-    std::cout << "weapon constructore called" << std::endl;
-}
-Weapon::~Weapon(void)
-{
-    std::cout << "weapon destructore called" << std::endl;
+Weapon::~Weapon(){
+    return ;
 }
