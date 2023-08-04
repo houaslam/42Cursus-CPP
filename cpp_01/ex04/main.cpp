@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 18:36:14 by houaslam          #+#    #+#             */
-/*   Updated: 2023/07/22 11:01:19 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/08/04 10:01:12 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,30 +16,35 @@ int main(int ac, char **av)
 {
     std::string line;
     std::string add;
-    std::string s1;
-    std::string s2;
+    std::ofstream out;
+    std::ifstream file;
 
     if (ac == 4)
     {
-        s1 = av[2];
-        s2 = av[3];
-        if (s1.empty())
+        if (av[2][0] == '\0')
         {
             std::cout << "ERROR\n";
             exit(1);
         }
         add = ".replace";
-        std::ofstream out;
         out.open(av[1] + add);
-        std::ifstream file;
+        if (!out.is_open())
+            return (1);
         file.open(av[1]);
+        if (!file.is_open())
+            return (1);
         if(file.is_open() && out.is_open())
         {
             while (getline(file, line))
-                handle_line(line + "\n", s1, s2, out);
+                handle_line(line + "\n", av[2], av[3], out);
             file.close();
+            out.close();
         }
         else
+        {
             std::cout << "ERROR\n";  
+            return (1);
+        }
     }
+    return (0);
 }

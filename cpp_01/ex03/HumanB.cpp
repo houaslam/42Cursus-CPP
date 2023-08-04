@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/04 15:26:08 by houaslam          #+#    #+#             */
-/*   Updated: 2023/07/29 09:51:47 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/08/04 09:06:34 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ HumanB::~HumanB(void)
     std::cout << "human destructore called" << std::endl;
 }
 
-void    HumanB::setWeapon(Weapon &weapon)
+void    HumanB::setWeapon(Weapon weapon)
 {
     this->weapon = &weapon;
 }

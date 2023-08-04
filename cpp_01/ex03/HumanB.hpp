@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/04 14:25:50 by houaslam          #+#    #+#             */
-/*   Updated: 2023/07/25 06:47:47 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/08/04 09:06:12 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,12 @@
 #include <string.h>
 
 class HumanB{
-    public :
+    private :
         std::string name;
+    public :
         Weapon *weapon;
         void    attack(void);
-        void    setWeapon(Weapon &weapon);
+        void    setWeapon(Weapon weapon);
         //constructore and destructore
         HumanB(std::string name);
         ~HumanB(void);

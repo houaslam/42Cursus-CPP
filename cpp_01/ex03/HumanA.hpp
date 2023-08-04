@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/04 14:25:50 by houaslam          #+#    #+#             */
-/*   Updated: 2023/06/06 15:29:31 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/08/04 09:01:32 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,9 @@
 #define HUMANA_HPP
 
 class HumanA{
-    public :
+    private :
         std::string name;
+    public :
         Weapon& weapon;
         void    attack(void);
         //constructore and destructore

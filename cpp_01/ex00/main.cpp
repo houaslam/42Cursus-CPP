@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 17:55:16 by houaslam          #+#    #+#             */
-/*   Updated: 2023/07/22 09:51:56 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/08/04 07:54:19 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 int main()
 {
-    Zombie attr("foo");
+    Zombie zombie("foo");
     Zombie *another_one = newZombie("boo");
     randomChump("noo");
     another_one->announce();
-    attr.announce();
+    zombie.announce();
     delete another_one;
 }

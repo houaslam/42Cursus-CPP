@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 18:36:10 by houaslam          #+#    #+#             */
-/*   Updated: 2023/07/22 11:04:15 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/08/04 09:16:29 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void    handle_line(std::string line, std::string s1, std::string s2, std::ofstream& out)
 {
-    int b = 0;
+    // int b = 0;
     size_t k = 0;
     size_t i = line.find(s1);
 
@@ -35,6 +35,6 @@ void    handle_line(std::string line, std::string s1, std::string s2, std::ofstr
             break;
         }
         i = line.find(s1);
-        b++;
+        // b++;
     }
 }
