@@ -6,12 +6,13 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/12 10:42:51 by houaslam          #+#    #+#             */
-/*   Updated: 2023/06/22 16:21:49 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/08/05 08:06:28 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
-#include <ostream>
+
+const int Fixed::fract = 8;
 
 Fixed::Fixed(void)
 {
@@ -37,11 +38,13 @@ int Fixed::getRawBits( void ) const
 
 void Fixed::setRawBits( int const raw )
 {
+    std::cout << "setRawBits member function called\n";
     this->store = raw;
 }
 
-void    Fixed::operator=(Fixed &elem)
+Fixed&    Fixed::operator=(Fixed &elem)
 {
     std::cout << "Copy assignment operator called\n";
     this->store = elem.getRawBits();
+    return(*this);
 }

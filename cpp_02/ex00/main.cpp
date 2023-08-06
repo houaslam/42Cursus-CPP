@@ -6,11 +6,12 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/12 10:40:30 by houaslam          #+#    #+#             */
-/*   Updated: 2023/06/22 16:39:32 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/08/05 07:40:51 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
+#include <iostream>
 
 int main( void ) 
 {

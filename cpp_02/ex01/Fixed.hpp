@@ -5,35 +5,38 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/11 17:48:19 by houaslam          #+#    #+#             */
-/*   Updated: 2023/06/23 18:45:02 by houaslam         ###   ########.fr       */
+/*   Created: 2023/08/05 08:12:34 by houaslam          #+#    #+#             */
+/*   Updated: 2023/08/05 13:36:59 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FIXED_HPP
 #define FIXED_HPP
+
 #include <iostream>
 #include <cmath>
+#include <math.h>
 
 class Fixed{
-    private :
-        int store;
-        static const int fract;
-    public :
-        // constructor and destructore
-        Fixed(const int elem);
-        Fixed(const float elem);
-        Fixed(void);
-        Fixed(Fixed const &elem);
-        ~Fixed(void);
+private :
+    int store;
+    static const int fract;
+public :
+    // canonical form
+    Fixed( void );
+    Fixed( const int nb );
+    Fixed( const float nb );
+    Fixed( Fixed const &elem );
+    ~Fixed( void );
+    Fixed& operator=( const Fixed &elem );
 
-        //function
-        float toFloat( void ) const;
-        int toInt( void ) const;
-        int getRawBits( void ) const;
-        void setRawBits( int const raw );
-        void operator=(Fixed &elem );
+    //function
+    int getRawBits( void ) const;
+	void setRawBits( int const raw );
+    float toFloat( void ) const;
+    int	toInt( void ) const;
 };
-std::ostream& operator<<(std::ostream& output, const Fixed& D);
+
+std::ostream& operator<<( std::ostream& out, const Fixed& fixed );
 
 #endif

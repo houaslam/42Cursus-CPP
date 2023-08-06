@@ -5,13 +5,12 @@
 #                                                     +:+ +:+         +:+      #
 #    By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/06/12 10:57:27 by houaslam          #+#    #+#              #
-#    Updated: 2023/06/12 10:57:51 by houaslam         ###   ########.fr        #
+#    Created: 2023/08/05 08:11:54 by houaslam          #+#    #+#              #
+#    Updated: 2023/08/05 08:46:23 by houaslam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-
-NAME = raw
+NAME = fixed
 CC = c++ -fsanitize=address
 CFLAGS = -Wall -Wextra -Werror
 EXTRA_FLAGS = -std=c++98
