@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/05 08:12:34 by houaslam          #+#    #+#             */
-/*   Updated: 2023/08/07 10:40:26 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/08/07 17:14:31 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,27 +36,28 @@ public :
     float toFloat( void ) const;
     int	toInt( void ) const;
     //comaparison
-    int operator>( const Fixed &first );
-    int operator<( const Fixed &first );
-    int operator>=( const Fixed &first );
-    int operator<=( const Fixed &first );
-    int operator==( const Fixed &first );
-    int operator!=( const Fixed &first );
+    int operator>( const Fixed &first ) const;
+    int operator<( const Fixed &first ) const;
+    int operator>=( const Fixed &first ) const;
+    int operator<=( const Fixed &first ) const;
+    int operator==( const Fixed &first ) const;
+    int operator!=( const Fixed &first ) const;
     //arithmetic
-    Fixed operator+( const Fixed &a );
-    Fixed operator*( const Fixed &a );
-    Fixed operator/( const Fixed &a );
-    Fixed operator-( const Fixed &a );
+    Fixed operator+( const Fixed &a ) const;
+    Fixed operator*( const Fixed &a ) const;
+    Fixed operator/( const Fixed &a ) const;
+    Fixed operator-( const Fixed &a ) const;
     // increment 
     Fixed& operator++( void );
     Fixed& operator++( int nb );
     Fixed& operator--( void );
     Fixed& operator--( int nb );
     // static function
-    static Fixed& max(Fixed& a, Fixed& b);
-    static Fixed& min(Fixed& a, Fixed& b);
-    const static Fixed& max(const Fixed& a, const Fixed& b);
-    const static Fixed& min(const Fixed& a, const Fixed& b);
+    static Fixed& max( Fixed& a, Fixed& b );
+    static Fixed& min( Fixed& a, Fixed& b );
+    const static Fixed& max( const Fixed& a, const Fixed& b );
+    const static Fixed& min( const Fixed& a, const Fixed& b );
+    Fixed abs( void );
 };
 
 std::ostream& operator<<( std::ostream& out, const Fixed& fixed );

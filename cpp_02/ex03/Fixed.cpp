@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/05 08:14:27 by houaslam          #+#    #+#             */
-/*   Updated: 2023/08/07 10:40:17 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/08/07 17:19:42 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,30 +18,30 @@ const int Fixed::fract = 8;
 
 Fixed::Fixed( void )
 {
-    std::cout << "Default  constructor called\n";
+    // std::cout << "Default  constructor called\n";
     this->store = 0;
 }
 
 Fixed::Fixed( Fixed const &elem )
 {
-    std::cout << "Copy constructor called\n";
+    // std::cout << "Copy constructor called\n";
     this->store = elem.getRawBits();
 }
 
 Fixed::~Fixed( void )
 {
-    std::cout << "Destructor called\n";
+    // std::cout << "Destructor called\n";
 }
 
 Fixed::Fixed( const int nb )
 {
-    std::cout << "int constructor called\n";
+    // std::cout << "int constructor called\n";
     this->store = nb << this->fract;
 }
 
 Fixed::Fixed( const float nb )
 {
-    std::cout << "float constructor called\n";
+    // std::cout << "float constructor called\n";
     this->store = roundf(nb * (1 << fract));
 }
 
@@ -49,7 +49,7 @@ Fixed::Fixed( const float nb )
 
 Fixed&    Fixed::operator=( const Fixed &elem )
 {
-    std::cout << "Copy assignment operator called\n";
+    // std::cout << "Copy assignment operator called\n";
     this->store = elem.getRawBits();
     return(*this);
 }
@@ -60,44 +60,44 @@ std::ostream& operator<<( std::ostream& out, const Fixed& fixed )
     return (out);
 }
 
-int Fixed::operator>( const Fixed &first )
+int Fixed::operator>( const Fixed &first ) const
 {
     return (this->store > first.store);
 }
 
-int Fixed::operator<( const Fixed &first )
+int Fixed::operator<( const Fixed &first ) const
 {
     return (this->store < first.store);
 }
 
-int Fixed::operator>=( const Fixed &first )
+int Fixed::operator>=( const Fixed &first ) const
 {
     return (this->store >= first.store);
 }
 
-int Fixed::operator<=( const Fixed &first )
+int Fixed::operator<=( const Fixed &first ) const
 {
     return (this->store <= first.store);
 }
 
-int Fixed::operator==( const Fixed &first )
+int Fixed::operator==( const Fixed &first ) const
 {
     return (this->store == first.store);
 }
 
-int Fixed::operator!=( const Fixed &first )
+int Fixed::operator!=( const Fixed &first ) const
 {
     return (this->store != first.store);
 }
 
-Fixed Fixed::operator+( const Fixed &a )
+Fixed Fixed::operator+( const Fixed &a ) const
 {
     Fixed res;
     res.store = a.store + this->store;
     return(res);
 }
 
-Fixed Fixed::operator*( const Fixed &a )
+Fixed Fixed::operator*( const Fixed &a ) const
 {
     Fixed res;
     
@@ -105,14 +105,14 @@ Fixed Fixed::operator*( const Fixed &a )
     return(res);
 }
 
-Fixed Fixed::operator/( const Fixed &a )
+Fixed Fixed::operator/( const Fixed &a ) const
 {
     Fixed res;
     res.store =  this->store / a.toFloat();
     return(res);
 }
 
-Fixed Fixed::operator-( const Fixed &a )
+Fixed Fixed::operator-( const Fixed &a ) const
 {
     Fixed res;
     res.store =this->store -  a.store;
@@ -193,4 +193,9 @@ int	Fixed::toInt( void ) const
     return(this->store >> this->fract);
 }
 
-
+Fixed Fixed::abs()
+{
+    int k = fabs(this->store) / (1 << fract);
+    Fixed res(k);
+    return(res);
+}
