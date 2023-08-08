@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/07 07:01:16 by houaslam          #+#    #+#             */
-/*   Updated: 2023/08/07 16:32:18 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/08/08 08:10:49 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ const Fixed& Point::get_y() const
 Point::Point(): x(0), y(0)
 {
     // std::cout << "default constructor called\n";
-    std::cout << x.getRawBits()<< "\n";
 }
 
 Point::Point( const Fixed& x, const Fixed& y ) : x(x), y(y)

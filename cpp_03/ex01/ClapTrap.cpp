@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.cpp                                          :+:      :+:    :+:   */
+/*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/12 10:42:51 by houaslam          #+#    #+#             */
-/*   Updated: 2023/06/12 13:27:08 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/08/08 08:58:11 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,7 @@ void ClapTrap::attack(const std::string& target)
     {
         this->energy--;
         std::cout << this->name 
-        << " attacks " << target 
-        <<", causing " << this->damage <<" points of damage!\n";
+        << " attacks " << target << std::endl;
     }
     else
         std::cout << this->name <<  " has no energy\n" ;

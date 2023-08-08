@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/05 08:14:27 by houaslam          #+#    #+#             */
-/*   Updated: 2023/08/07 17:19:42 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/08/08 08:23:07 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ Fixed::~Fixed( void )
 Fixed::Fixed( const int nb )
 {
     // std::cout << "int constructor called\n";
-    this->store = nb << this->fract;
+    setRawBits(nb << this->fract);
 }
 
 Fixed::Fixed( const float nb )
@@ -195,7 +195,7 @@ int	Fixed::toInt( void ) const
 
 Fixed Fixed::abs()
 {
-    int k = fabs(this->store) / (1 << fract);
+    int k = fabs(this->store);
     Fixed res(k);
     return(res);
 }
