@@ -5,24 +5,29 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/05 08:40:57 by houaslam          #+#    #+#             */
-/*   Updated: 2023/08/09 10:06:16 by houaslam         ###   ########.fr       */
+/*   Created: 2023/06/12 10:40:30 by houaslam          #+#    #+#             */
+/*   Updated: 2023/08/11 18:33:54 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
-#include "Point.hpp"
+#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 
-int main( void )
+int main( void ) 
 {
-    Point a(3, 1);
-    Point b(1,3);
-    Point c(4, 4);
-    Point point(3, 3);
+	ClapTrap robin("robin");
+	ScavTrap robot("cyborg");
+	FragTrap fish("animal");
+	DiamondTrap cat("atlantic");
 
-    if (bsp(a, b, c, point))
-        std::cout << "the point is in the triangle\n";
-    else
-        std::cout << "the point is out the triangle\n";
-    return 0;
+	// fish.attack("cyborg");
+	cat.attack("cyborg");
+	// robin.attack("cyborg");
+	// robot.takeDamage(3);
+	// robot.attack("robin");
+	// robin.takeDamage(3);
+	cat.WhoAmI();
+	return 0; 
 }

@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/12 10:42:51 by houaslam          #+#    #+#             */
-/*   Updated: 2023/08/08 08:45:34 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/08/11 13:50:57 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 // constructor and destructore
 ClapTrap::ClapTrap(std::string name): name(name) , hit(10), energy(10), damage(0)
 {
-    std::cout <<  "Parameter constructore called\n";
+    std::cout <<  "Parameters constructore called\n";
 }
 
 ClapTrap::ClapTrap(void) : hit(10), energy(10), damage(0)

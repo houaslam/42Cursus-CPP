@@ -1,28 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/05 08:40:57 by houaslam          #+#    #+#             */
-/*   Updated: 2023/08/09 10:06:16 by houaslam         ###   ########.fr       */
+/*   Created: 2023/08/11 17:30:13 by houaslam          #+#    #+#             */
+/*   Updated: 2023/08/11 18:30:40 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
-#include "Point.hpp"
+#ifndef DIAMONDTRAP_HPP
+#define DIAMONDTRAP_HPP
 
-int main( void )
-{
-    Point a(3, 1);
-    Point b(1,3);
-    Point c(4, 4);
-    Point point(3, 3);
+#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
-    if (bsp(a, b, c, point))
-        std::cout << "the point is in the triangle\n";
-    else
-        std::cout << "the point is out the triangle\n";
-    return 0;
-}
+class DiamondTrap : public ScavTrap , public FragTrap{
+private :
+    std::string name;
+public :
+    DiamondTrap(std::string name);
+    DiamondTrap(DiamondTrap& tocpy);
+    DiamondTrap(void);
+    ~ DiamondTrap(void);
+
+    // regular
+    void WhoAmI(void);  
+} ;
+
+#endif

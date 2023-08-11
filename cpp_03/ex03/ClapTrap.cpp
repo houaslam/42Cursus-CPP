@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/12 10:42:51 by houaslam          #+#    #+#             */
-/*   Updated: 2023/08/11 13:51:37 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/08/11 13:50:47 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,7 @@ ClapTrap::ClapTrap(std::string name) : name(name) , hit(10), energy(10), damage(
 
 ClapTrap::ClapTrap(void)
 {
-    std::cout <<  "ClapTrap default constructore called\n";
-
+    return ;
 }
 
 ClapTrap::~ClapTrap(void)

@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/05 08:40:57 by houaslam          #+#    #+#             */
-/*   Updated: 2023/08/09 10:06:16 by houaslam         ###   ########.fr       */
+/*   Created: 2023/06/11 17:48:19 by houaslam          #+#    #+#             */
+/*   Updated: 2023/08/11 17:21:46 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
-#include "Point.hpp"
+#include <iostream>
+#include <string>
+#include "ClapTrap.hpp"
+#ifndef ScavTrap_HPP
+#define ScavTrap_HPP
 
-int main( void )
-{
-    Point a(3, 1);
-    Point b(1,3);
-    Point c(4, 4);
-    Point point(3, 3);
+class ScavTrap : public ClapTrap{
+    public :
+        // constructor and destructore
+        ScavTrap(std::string name);
+        ScavTrap(ScavTrap& tocpy);
+        ScavTrap(void);
+        ~ScavTrap(void);
 
-    if (bsp(a, b, c, point))
-        std::cout << "the point is in the triangle\n";
-    else
-        std::cout << "the point is out the triangle\n";
-    return 0;
-}
+        //function
+        void guardGate(void);
+};
+
+#endif

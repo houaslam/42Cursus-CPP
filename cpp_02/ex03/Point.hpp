@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/07 07:01:31 by houaslam          #+#    #+#             */
-/*   Updated: 2023/08/08 07:56:41 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/08/09 09:42:20 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,15 +27,16 @@ private :
 public :
 // constructor
     Point();
-    Point( const Fixed& x, const Fixed& y );
+    Point( const float x, const float y );
     Point( Point& a );
     const Point& operator=( Point& original );
     ~Point();
 // function
-    bool bsp( Point const& a, Point const& b, Point const& c, Point const& point );
     const Fixed& get_x( void ) const;
     const Fixed& get_y( void ) const;
-    Fixed area(const Point &a, const Point &b, const Point& c);
+    static Fixed area(const Point &a, const Point &b, const Point& c);
 };
+
+bool bsp(Point const a, Point const b, Point const c, Point const p);
 
 #endif

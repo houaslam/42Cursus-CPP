@@ -6,27 +6,31 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/12 10:42:51 by houaslam          #+#    #+#             */
-/*   Updated: 2023/08/11 13:53:06 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/08/11 14:02:37 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
 // constructor and destructore
-ScavTrap::ScavTrap(std::string name) : name(name) , hit(100), energy(50), damage(20)
+ScavTrap::ScavTrap(std::string name)
 {
+    this->name = name;
+    hit = 100;
+    energy = 50;
+    damage = 20;
     std::cout <<  "ScavTrap parameters constructore is called!\n";
 }
 
 ScavTrap::ScavTrap(void)
 {
-    return ;
+    std::cout << "ScavTrap default constructor called\n";
 }
 
 ScavTrap::ScavTrap(ScavTrap& tocpy)
 {
     *this = tocpy;
-     std::cout << "ScavTrap copy constructor called\n";
+    std::cout << "ScavTrap copy constructor called\n";
 }
 
 ScavTrap::~ScavTrap(void)

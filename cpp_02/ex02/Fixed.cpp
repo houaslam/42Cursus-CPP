@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/05 08:14:27 by houaslam          #+#    #+#             */
-/*   Updated: 2023/08/06 17:09:14 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/08/09 07:19:59 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,7 @@ std::ostream& operator<<( std::ostream& out, const Fixed& fixed )
     return (out);
 }
 
+//comparison 
 int Fixed::operator>( const Fixed &first )
 {
     return (this->store > first.store);
@@ -89,6 +90,8 @@ int Fixed::operator!=( const Fixed &first )
 {
     return (this->store != first.store);
 }
+
+//arithmetic
 
 Fixed Fixed::operator+( const Fixed &a )
 {
