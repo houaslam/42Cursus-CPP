@@ -1,13 +1,22 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/08/13 14:57:02 by houaslam          #+#    #+#              #
+#    Updated: 2023/08/13 15:21:24 by houaslam         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
 
-NAME = battle
-CC = c++ -fsanitize=address
+NAME = fixed
+CC = c++ -fsanitize=address -g3
 CFLAGS = -Wall -Wextra -Werror
 EXTRA_FLAGS = -std=c++98
 
 SRCS = main.cpp \
-		Animal.cpp\
-		Cat.cpp\
-		Dog.cpp
+	   Animal.cpp
 
 OBJ = ${SRCS:.cpp=.o}
 

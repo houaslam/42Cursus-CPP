@@ -1,39 +1,38 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/08/13 15:08:37 by houaslam          #+#    #+#             */
+/*   Updated: 2023/08/13 18:11:07 by houaslam         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Animal.hpp"
 
-// constructor and destructore
-
-Animal::Animal(void)
+Animal::Animal( void )
 {
-    std::cout <<  "Animal constructore called\n";
+    std::cout << "Animal constructore called!\n";
 }
 
-Animal::~Animal(void)
+Animal::Animal( std::string type ) : type( type )
 {
-    std::cout <<  "Animal Destructore called\n";
+    std::cout << "Animal parameters!\n";
 }
 
-
-Animal::Animal(Animal& tocpy)
-{
-    *this = tocpy;
-     std::cout << "Animal copy constructor called\n";
+Animal::~Animal( void ){
+    std::cout << "Animal Destructore is called!\n";
 }
 
-//function
-
-void Animal::makeSound(void)
+Animal::Animal( Animal &to_copy )
 {
-    std::cout << "ANIMAL SOUND!\n";
+    *this = to_copy;
+    std::cout << "Copy constructore called!\n";
 }
 
-std::string Animal::getType(void)
-{
-    return this->type;
-}
-
-Animal& Animal::operator=(const Animal& elem)
-{
-    std::cout << "Copy assignment operator called\n";
+Animal& Animal::operator=(const Animal& elem){
     this->type = elem.type;
     return *this;
 }
