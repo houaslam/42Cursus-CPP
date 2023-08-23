@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/13 15:21:27 by houaslam          #+#    #+#             */
-/*   Updated: 2023/08/23 17:29:38 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/08/23 18:28:31 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ int main()
 {
     const Animal* meta = new Animal();
     const Animal* j = new Dog();
+    exit(0);
     const Animal* i = new Cat();
     std::cout << std::endl;
     std::cout << j->getType() << " " << std::endl;

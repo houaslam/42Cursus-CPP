@@ -6,7 +6,7 @@
 #    By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/13 14:57:02 by houaslam          #+#    #+#              #
-#    Updated: 2023/08/23 17:13:46 by houaslam         ###   ########.fr        #
+#    Updated: 2023/08/23 18:25:24 by houaslam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,7 @@ SRCS = main.cpp \
 	   Animal.cpp \
 	   Dog.cpp \
 	   Cat.cpp \
+	   Brain.cpp \
 
 OBJ = ${SRCS:.cpp=.o}
 
