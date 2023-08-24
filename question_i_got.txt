@@ -150,12 +150,34 @@ ANSWER ->
     definition requires calling happens
     at runtime
 }
-QUESTION = 
+QUESTION = local reference problem?
 ANSWER ->
-QUESTION = 
+{
+    when a function return a reference , and int the implementation the returned
+    value is declared in the scope function
+    the problem here is when the func scope end the reference will hold garbege 
+    value , cause reference hold same memory as the variable.
+}
+QUESTION = what special about abstract class
 ANSWER ->
-QUESTION = 
+{
+    The Abstract class type cannot be instantiated,
+    but pointers and references to it can be generated.
+    Abstract types cannot be used as parameter types
+    as function return types,
+}
+QUESTION = Why Can't We Make an Abstract Class Object?
 ANSWER ->
+{
+    When we construct a pure virtual function in Abstract,
+    we reserve a slot in the VTABLE for a function, 
+    but we don't put any address in that slot. As a result,
+    the VTABLE will be unfinished.
+
+    Since the VTABLE for the Abstract class is missing, 
+    the compiler will refuse to let you create an object 
+    for it and will show an error message if you try.
+}
 QUESTION = 
 ANSWER ->
 QUESTION = 
@@ -187,6 +209,6 @@ ANSWER ->
 QUESTION = 
 ANSWER ->
 NOTE
-there is two types of polomorphisme 
+there is two types of polymorphisme 
 run time : happens in inheritance case , when we override a function 
-compile time : when overloading an opetratore or a function its neccecery to have a pointer or a reference
+compile time : when overloading an opetrator or a function its neccecery to have a pointer or a reference

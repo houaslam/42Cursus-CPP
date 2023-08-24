@@ -6,7 +6,7 @@
 #    By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/13 14:57:02 by houaslam          #+#    #+#              #
-#    Updated: 2023/08/24 12:43:43 by houaslam         ###   ########.fr        #
+#    Updated: 2023/08/24 12:43:57 by houaslam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,10 +18,9 @@ EXTRA_FLAGS = -std=c++98
 
 SRCS = main.cpp \
 	   Animal.cpp \
-	   WrongAnimal.cpp \
 	   Dog.cpp \
 	   Cat.cpp \
-	   WrongCat.cpp \
+	   Brain.cpp \
 
 OBJ = ${SRCS:.cpp=.o}
 

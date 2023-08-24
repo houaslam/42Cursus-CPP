@@ -5,31 +5,35 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/13 15:21:27 by houaslam          #+#    #+#             */
-/*   Updated: 2023/08/24 11:40:57 by houaslam         ###   ########.fr       */
+/*   Created: 2023/08/24 12:56:08 by houaslam          #+#    #+#             */
+/*   Updated: 2023/08/24 14:21:50 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
-#include "WrongAnimal.hpp"
-#include "Cat.hpp"
-#include "Dog.hpp"
+#include "AMateria.hpp"
 
 int main()
 {
-    const Animal* j = new Dog();
-    const Animal* i = new Cat();
+	IMateriaSource* src = new MateriaSource();
+	src->learnMateria(new Ice());
+	src->learnMateria(new Cure());
 
-    std::cout << std::endl;
-    std::cout << j->getType() << " " << std::endl;
-    std::cout << i->getType() << " " << std::endl;
-    std::cout << std::endl;
+	ICharacter* me = new Character("me");
 
-    i->makeSound(); //will output the cat sound!
-    j->makeSound();
-    std::cout << std::endl;
+	AMateria* tmp;
+	tmp = src->createMateria("ice");
+	me->equip(tmp);
+	tmp = src->createMateria("cure");
+	me->equip(tmp);
 
-    delete j;
-    delete i;
-    return 0;
+	ICharacter* bob = new Character("bob");
+
+	me->use(0, *bob);
+	me->use(1, *bob);
+
+	delete bob;
+	delete me;
+	delete src;
+
+	return 0;
 }

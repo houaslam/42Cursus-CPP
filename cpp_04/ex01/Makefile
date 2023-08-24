@@ -6,11 +6,11 @@
 #    By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/13 14:57:02 by houaslam          #+#    #+#              #
-#    Updated: 2023/08/23 18:25:24 by houaslam         ###   ########.fr        #
+#    Updated: 2023/08/24 12:43:50 by houaslam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = fixed
+NAME = poly
 CC = c++
 CC += -fsanitize=address -g3
 CFLAGS = -Wall -Wextra -Werror
@@ -30,8 +30,8 @@ ${NAME} : ${OBJ}
 	${CC} ${CFLAGS} ${EXTRA_FLAGS} ${OBJ} -o ${NAME}
 
 clean :
-	rm ${OBJ}
+	rm -rf ${OBJ}
 fclean : clean
-	rm -f ${NAME}
+	rm -rf ${NAME}
 
 re : fclean all

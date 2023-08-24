@@ -5,33 +5,30 @@
 #                                                     +:+ +:+         +:+      #
 #    By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/08/13 14:57:02 by houaslam          #+#    #+#              #
-#    Updated: 2023/08/24 12:43:43 by houaslam         ###   ########.fr        #
+#    Created: 2023/08/24 12:56:11 by houaslam          #+#    #+#              #
+#    Updated: 2023/08/24 13:00:20 by houaslam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = poly
+NAME = materia
 CC = c++
 CC += -fsanitize=address -g3
-CFLAGS = -Wall -Wextra -Werror
-EXTRA_FLAGS = -std=c++98
+CFLAGS = -wall -wextra -werror
+EXTRA_CFLAGS = -std=c++98
 
-SRCS = main.cpp \
-	   Animal.cpp \
-	   WrongAnimal.cpp \
-	   Dog.cpp \
-	   Cat.cpp \
-	   WrongCat.cpp \
+SRC = main.cc \
+	  AMateria.cpp
 
-OBJ = ${SRCS:.cpp=.o}
+OBJ = ${SRC:.cpp =.o}
 
 all : ${NAME}
 
 ${NAME} : ${OBJ}
-	${CC} ${CFLAGS} ${EXTRA_FLAGS} ${OBJ} -o ${NAME}
+	${CC} ${CFLAGS} ${EXTRA_CFLAGS} ${OBJ} -O ${NAME}
 
-clean :
+clean
 	rm -rf ${OBJ}
+
 fclean : clean
 	rm -rf ${NAME}
 
