@@ -181,3 +181,7 @@ QUESTION =
 ANSWER ->
 QUESTION = 
 ANSWER ->
+NOTE
+there is two types of polomorphisme 
+run time : happens in inheritance case , when we override a function 
+compile time : when overloading an opetratore or a function its neccecery to have a pointer or a reference
