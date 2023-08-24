@@ -29,8 +29,8 @@ ${NAME} : ${OBJ}
 	${CC} ${CFLAGS} ${EXTRA_FLAGS} ${OBJ} -o ${NAME}
 
 clean :
-	rm ${OBJ}
+	rm -rf ${OBJ}
 fclean : clean
-	rm -f ${NAME}
+	rm -rf ${NAME}
 
 re : fclean all
