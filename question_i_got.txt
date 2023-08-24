@@ -143,8 +143,13 @@ ANSWER ->
     by the symbol of the operator
     and operator functions are called when the corresponding operator is used. 
 }
-QUESTION = 
+QUESTION = what is the difference bettween run time and compile time ?
 ANSWER ->
+{
+    The decision about which function 
+    definition requires calling happens
+    at runtime
+}
 QUESTION = 
 ANSWER ->
 QUESTION = 
