@@ -6,31 +6,15 @@
 /*   By: hajarouaslam <hajarouaslam@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 12:56:06 by houaslam          #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2023/08/25 04:11:02 by hajarouasla      ###   ########.fr       */
-=======
-/*   Updated: 2023/08/25 10:13:11 by houaslam         ###   ########.fr       */
->>>>>>> refs/remotes/origin/master
+/*   Updated: 2023/08/25 13:34:50 by hajarouasla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AMateria.hpp"
 
+//CANONICAL FORM 
 AMateria::AMateria(std::string const & type){
     this->type = type;
-}
-
-std::string const & AMateria::getType() const
-{
-	return this->type;
-}
-
-void AMateria::use(ICharacter& target)
-<<<<<<< HEAD
-{}
-=======
-{
-	
 }
 
 AMateria::AMateria(){
@@ -50,4 +34,14 @@ AMateria& AMateria::operator=(AMateria &materia){
 	this->type = materia.type;
 	return *this;
 }
->>>>>>> refs/remotes/origin/master
+
+// REGULAR FUNCTION
+std::string const & AMateria::getType() const
+{
+	return this->type;
+}
+
+void AMateria::use(ICharacter& target)
+{
+	std::cout << "AMateria is used on " << target.getName(); 
+}

@@ -3,30 +3,34 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+         #
+#    By: hajarouaslam <hajarouaslam@student.42.f    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/24 12:56:11 by houaslam          #+#    #+#              #
-#    Updated: 2023/08/24 13:00:20 by houaslam         ###   ########.fr        #
+#    Updated: 2023/08/25 13:15:18 by hajarouasla      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = materia
 CC = c++
 CC += -fsanitize=address -g3
-CFLAGS = -wall -wextra -werror
+CFLAGS = -Wall -Wextra -Werror
 EXTRA_CFLAGS = -std=c++98
 
-SRC = main.cc \
-	  AMateria.cpp
+SRC = main.cpp \
+	  AMateria.cpp \
+	  Character.cpp \
+	  Cure.cpp \
+	  Ice.cpp \
+	  MateriaSource.cpp
 
 OBJ = ${SRC:.cpp =.o}
 
 all : ${NAME}
 
 ${NAME} : ${OBJ}
-	${CC} ${CFLAGS} ${EXTRA_CFLAGS} ${OBJ} -O ${NAME}
+	${CC} ${CFLAGS} ${EXTRA_CFLAGS} ${OBJ} -o ${NAME}
 
-clean
+clean :
 	rm -rf ${OBJ}
 
 fclean : clean

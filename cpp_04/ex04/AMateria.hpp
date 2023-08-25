@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AMateria.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hajarouaslam <hajarouaslam@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 12:56:03 by houaslam          #+#    #+#             */
-/*   Updated: 2023/08/25 10:11:05 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/08/25 13:54:30 by hajarouasla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,15 @@ class AMateria
 protected:
     std::string type;
 public:
+// DESTRUCTOR AND CONSTRUCTOR
     AMateria(std::string const & type);
     AMateria();
-    ~AMateria();
+    virtual ~AMateria();
     AMateria(AMateria &src);
 	AMateria& operator=(AMateria &materia);
-	std::string const & getType() const; //Returns the materia type
+
+// REGULAR FUNCTION
+	std::string const & getType() const;
 	virtual AMateria* clone() const = 0;
 	virtual void use(ICharacter& target);
 };

@@ -6,7 +6,7 @@
 /*   By: hajarouaslam <hajarouaslam@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 14:15:29 by houaslam          #+#    #+#             */
-/*   Updated: 2023/08/25 04:17:56 by hajarouasla      ###   ########.fr       */
+/*   Updated: 2023/08/25 13:08:53 by hajarouasla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,6 @@ Cure::Cure(Cure& cure){
 
 Cure& Cure::operator=(Cure &cure)
 {
+    (void)cure;
     return *this;
 }

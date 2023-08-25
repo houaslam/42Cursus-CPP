@@ -6,7 +6,7 @@
 /*   By: hajarouaslam <hajarouaslam@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 14:07:55 by houaslam          #+#    #+#             */
-/*   Updated: 2023/08/25 04:14:22 by hajarouasla      ###   ########.fr       */
+/*   Updated: 2023/08/25 13:35:08 by hajarouasla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 class Ice: public AMateria{
 public :
-// ANONICAL FORM
+// CANONICAL FORM
     Ice();
     ~Ice();
     Ice(Ice &ice);

@@ -6,7 +6,7 @@
 /*   By: hajarouaslam <hajarouaslam@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 14:09:37 by houaslam          #+#    #+#             */
-/*   Updated: 2023/08/25 04:16:18 by hajarouasla      ###   ########.fr       */
+/*   Updated: 2023/08/25 13:09:55 by hajarouasla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,6 @@ Ice::Ice(Ice &ice)
 }
 
 Ice& Ice::operator=(Ice &ice){
+    (void)ice;
     return *this;
 }

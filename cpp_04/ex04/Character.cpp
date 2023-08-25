@@ -6,7 +6,7 @@
 /*   By: hajarouaslam <hajarouaslam@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/25 04:23:36 by hajarouasla       #+#    #+#             */
-/*   Updated: 2023/08/25 06:27:40 by hajarouasla      ###   ########.fr       */
+/*   Updated: 2023/08/25 13:45:01 by hajarouasla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ Character::~Character(){
 	int k = 0;
 	while(k < 4 && this->inventory[k] == NULL)
         delete this->inventory[k];
-	delete inventory;
     std::cout << "Character Destructor called!\n";
 }
 
@@ -26,24 +25,34 @@ std::string const & Character::getName() const{
 
 void Character::equip(AMateria* m){
     int k = 0;
-    while(k < 4 && this->inventory[k] == NULL)
-        this->inventory[k] = m;
+    while(k < 4)
+    {
+        if (this->inventory[k] == NULL)
+        {
+            this->inventory[k] = m;
+            return ;
+        }
+    }
 }
 
 void Character::unequip(int idx){
-    if(idx > 4)
+    if(idx < 4 && idx > 0 && this->inventory[idx])
 	{
-		delete this->inventory[idx];	
+		delete this->inventory[idx];
         this->inventory[idx] = NULL;
 	}
 }
 
 void Character::use(int idx, ICharacter& target){
-    this->inventory[idx]->use(target);
+    if (this->inventory[idx])
+        this->inventory[idx]->use(target);
 }
 
 Character::Character(std::string const &name){
     this->name = name;
+    int i = 0;
+    while(i < 4)
+        this->inventory[i] = NULL;
 }
 
 Character::Character(){
