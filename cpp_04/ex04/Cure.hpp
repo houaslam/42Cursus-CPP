@@ -17,9 +17,14 @@
 
 class Cure: public AMateria{
 public :
-    virtual AMateria* clone() const;
+// CANONICAL FORM
     Cure();
     ~Cure();
+    Cure(Cure &cure);
+    Cure& operator=(Cure &cure);
+//REGULAR FUNCTION
+    virtual AMateria* clone() const;
+    virtual void use(ICharacter& target);
 };
 
 #endif

@@ -17,9 +17,14 @@
 
 class Ice: public AMateria{
 public :
-    virtual AMateria* clone() const;
+// ANONICAL FORM
     Ice();
     ~Ice();
+    Ice(Ice &ice);
+    Ice& operator=(Ice &ice);
+//REGULAR FUNCTION
+    virtual AMateria* clone() const;
+    virtual void use(ICharacter& target);
 };
 
 #endif

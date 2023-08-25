@@ -25,3 +25,13 @@ Cure::Cure(void){
 Cure::~Cure(void){
     std::cout << "Cure Destructor is called!\n";
 }
+
+Cure::Cure(Cure& cure){
+    *this = cure;
+    std::cout << "Copy constructor is called!\n";
+}
+
+Cure& Cure::operator=(Cure &cure)
+{
+    return *this;
+}

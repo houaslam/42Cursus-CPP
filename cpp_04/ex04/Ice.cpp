@@ -17,6 +17,10 @@ AMateria* Ice::clone(void) const{
     return ret;
 }
 
+void Ice::use(ICharacter& target){
+    std::cout << ""
+}
+
 Ice::Ice(void){
     this->type = "ice";
     std::cout << "Ice Default constructor is called!\n";
@@ -24,4 +28,13 @@ Ice::Ice(void){
 
 Ice::~Ice(){
     std::cout << "Ice Destructor is called!\n";
+}
+
+Ice::Ice(Ice &ice)
+{
+    *this = ice;
+}
+
+Ice& Ice::operator=(Ice &ice){
+    return *this;
 }
