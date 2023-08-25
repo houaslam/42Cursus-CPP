@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AMateria.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hajarouaslam <hajarouaslam@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 12:56:06 by houaslam          #+#    #+#             */
-/*   Updated: 2023/08/24 14:03:37 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/08/25 04:11:02 by hajarouasla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,4 @@ std::string const & AMateria::getType() const
 }
 
 void AMateria::use(ICharacter& target)
-{
-	
-}
+{}

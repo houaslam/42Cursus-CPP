@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cure.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hajarouaslam <hajarouaslam@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 14:15:29 by houaslam          #+#    #+#             */
-/*   Updated: 2023/08/24 14:18:11 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/08/25 04:17:56 by hajarouasla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,10 @@
 AMateria* Cure::clone() const{
     AMateria *res = new Cure;
     return res;
+}
+
+void Cure::use(ICharacter& target){
+    std::cout << "* heals " << target.getName() << " ’s wounds *\n";
 }
 
 Cure::Cure(void){
