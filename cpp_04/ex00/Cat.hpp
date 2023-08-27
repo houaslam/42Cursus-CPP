@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hajarouaslam <hajarouaslam@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/23 16:18:52 by houaslam          #+#    #+#             */
-/*   Updated: 2023/08/23 17:10:18 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/08/26 19:20:54 by hajarouasla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ public :
     Cat();
     ~Cat();
     Cat(Cat &cat);
+    Cat& operator=(const Cat& elem);
 };
 
 #endif

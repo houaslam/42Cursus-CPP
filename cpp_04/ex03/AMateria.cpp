@@ -6,7 +6,7 @@
 /*   By: hajarouaslam <hajarouaslam@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 12:56:06 by houaslam          #+#    #+#             */
-/*   Updated: 2023/08/25 13:34:50 by hajarouasla      ###   ########.fr       */
+/*   Updated: 2023/08/26 09:17:01 by hajarouasla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,16 @@ AMateria::AMateria(std::string const & type){
 }
 
 AMateria::AMateria(){
-	std::cout << "AMateria Default constructor is called!\n";
+	// std::cout << "AMateria Default constructor is called!\n";
 }
 
 AMateria::~AMateria(){
-	std::cout << "AMateria Destructor is called!\n";
+	// std::cout << "AMateria Destructor is called!\n";
 }
 
 AMateria::AMateria(AMateria &src){
 	*this = src;
-	std::cout << "AMateria copy constructor is called!\n";
+	// std::cout << "AMateria copy constructor is called!\n";
 }
 
 AMateria& AMateria::operator=(AMateria &materia){
@@ -43,5 +43,5 @@ std::string const & AMateria::getType() const
 
 void AMateria::use(ICharacter& target)
 {
-	std::cout << "AMateria is used on " << target.getName(); 
+	// std::cout << "AMateria is used on " << target.getName(); 
 }

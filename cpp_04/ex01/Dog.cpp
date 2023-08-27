@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hajarouaslam <hajarouaslam@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/14 13:58:58 by houaslam          #+#    #+#             */
-/*   Updated: 2023/08/23 18:28:28 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/08/26 19:18:08 by hajarouasla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
+#include "Brain.hpp"
 
 void    Dog::makeSound() const {
     std::cout << "Wouf Wouf....!\n";
@@ -31,4 +32,10 @@ Dog::~Dog(){
 Dog::Dog(Dog &dog)
 {
     *this = dog;
+}
+
+Dog& Dog::operator=(Dog &src){
+    this->type = src.type;
+    this->brain = new Brain(*src.brain);
+    return *this;
 }

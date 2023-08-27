@@ -6,7 +6,7 @@
 /*   By: hajarouaslam <hajarouaslam@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/25 03:57:00 by hajarouasla       #+#    #+#             */
-/*   Updated: 2023/08/25 13:53:26 by hajarouasla      ###   ########.fr       */
+/*   Updated: 2023/08/26 09:17:37 by hajarouasla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 MateriaSource::~MateriaSource(){
 		int k = 0;
 	while(k < 4 && this->inventory[k] == NULL)
-        this->inventory[k] = NULL;
-    std::cout << "MateriaSource Destructor called!\n";
+        this->inventory[k++] = NULL;
+    // std::cout << "MateriaSource Destructor called!\n";
 }
 
 void MateriaSource::learnMateria(AMateria* src){
@@ -30,6 +30,7 @@ void MateriaSource::learnMateria(AMateria* src){
             this->inventory[k] = src;
             return ;
         }
+        k++;
     }
 }
 
@@ -41,6 +42,7 @@ AMateria*  MateriaSource::createMateria(std::string const & type){
         {
             return (this->inventory[k]->clone());
         }
+        k++;
     }
 	return NULL;
 }
@@ -48,8 +50,8 @@ AMateria*  MateriaSource::createMateria(std::string const & type){
 MateriaSource::MateriaSource(){
 	int i = 0;
     while(i < 4)
-        this->inventory[i] = NULL;
-    std::cout << "Character Default constructor is called!\n";
+        this->inventory[i++] = NULL;
+    // std::cout << "Character Default constructor is called!\n";
 }
 
 MateriaSource::MateriaSource(MateriaSource &src){
@@ -57,8 +59,8 @@ MateriaSource::MateriaSource(MateriaSource &src){
 }
 
 MateriaSource& MateriaSource::operator=(MateriaSource &src){
-	int k = 0;
-	while(k < 4)
+	int k = -1;
+	while(++k < 4)
 		this->inventory[k] = src.inventory[k];
 	return *this;
 }

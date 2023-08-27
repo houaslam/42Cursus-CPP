@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hajarouaslam <hajarouaslam@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/23 18:08:13 by houaslam          #+#    #+#             */
-/*   Updated: 2023/08/23 18:15:59 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/08/26 19:16:40 by hajarouasla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ public :
     Brain();
     ~Brain();
     Brain(Brain &ref);
+    Brain& operator=(Brain &ref);
 };
 
 #endif

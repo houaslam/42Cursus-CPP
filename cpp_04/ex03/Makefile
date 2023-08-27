@@ -6,7 +6,7 @@
 #    By: hajarouaslam <hajarouaslam@student.42.f    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/24 12:56:11 by houaslam          #+#    #+#              #
-#    Updated: 2023/08/25 13:15:18 by hajarouasla      ###   ########.fr        #
+#    Updated: 2023/08/26 09:14:58 by hajarouasla      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ SRC = main.cpp \
 	  Ice.cpp \
 	  MateriaSource.cpp
 
-OBJ = ${SRC:.cpp =.o}
+OBJ = ${SRC:.cpp=.o}
 
 all : ${NAME}
 

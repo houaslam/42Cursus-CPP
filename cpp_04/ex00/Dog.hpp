@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hajarouaslam <hajarouaslam@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/14 13:59:23 by houaslam          #+#    #+#             */
-/*   Updated: 2023/08/23 17:10:24 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/08/26 19:22:24 by hajarouasla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ public :
     Dog();
     ~Dog();
     Dog(Dog &dog);
+    Dog& operator=(Dog &src);
 };
 
 #endif

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hajarouaslam <hajarouaslam@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/13 15:21:27 by houaslam          #+#    #+#             */
-/*   Updated: 2023/08/24 11:00:06 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/08/26 09:52:06 by hajarouasla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,21 +19,27 @@
 int main()
 {
     const Animal* meta = new Animal();
-    const WrongAnimal* wrongmeta = new WrongAnimal();
     const Animal* j = new Dog();
     const Animal* i = new Cat();
+    const WrongAnimal* wrongmeta = new WrongAnimal();
     const WrongAnimal* i2 = new WrongCat();
+    
     std::cout << std::endl;
+    
     std::cout << j->getType() << " " << std::endl;
     std::cout << i->getType() << " " << std::endl;
     std::cout << i2->getType() << " " << std::endl;
+    
     std::cout << std::endl;
+    
     i->makeSound(); //will output the cat sound!
-    i2->makeSound(); //will output the cat sound!
     j->makeSound();
     meta->makeSound();
+    i2->makeSound(); //will output the cat sound!
     wrongmeta->makeSound();
+    
     std::cout << std::endl;
+    
     delete j;
     delete i;
     delete i2;

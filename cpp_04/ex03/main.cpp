@@ -6,7 +6,7 @@
 /*   By: hajarouaslam <hajarouaslam@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 12:56:08 by houaslam          #+#    #+#             */
-/*   Updated: 2023/08/25 09:24:25 by hajarouasla      ###   ########.fr       */
+/*   Updated: 2023/08/26 09:15:55 by hajarouasla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ int main()
 	src->learnMateria(new Ice());
 	src->learnMateria(new Cure());
 
+	// exit (0);
 	ICharacter* me = new Character("me");
 
 	AMateria* tmp;
