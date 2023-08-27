@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Character.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hajarouaslam <hajarouaslam@student.42.f    +#+  +:+       +#+        */
+/*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/25 04:23:36 by hajarouasla       #+#    #+#             */
-/*   Updated: 2023/08/26 09:17:10 by hajarouasla      ###   ########.fr       */
+/*   Updated: 2023/08/27 15:10:40 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ Character::~Character(){
 	int k = 0;
 	while(k < 4 && this->inventory[k] == NULL)
         delete this->inventory[k++];
-    // std::cout << "Character Destructor called!\n";
+    std::cout << "Character Destructor called!\n";
 }
 
 std::string const & Character::getName() const{
@@ -60,7 +60,7 @@ Character::Character(){
     int i = 0;
     while(i < 4)
         this->inventory[i++] = NULL;
-    // std::cout << "Character Default constructor is called!\n";
+    std::cout << "Character Default constructor is called!\n";
 }
 
 Character::Character(Character &src){

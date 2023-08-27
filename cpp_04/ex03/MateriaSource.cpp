@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   MateriaSource.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hajarouaslam <hajarouaslam@student.42.f    +#+  +:+       +#+        */
+/*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/25 03:57:00 by hajarouasla       #+#    #+#             */
-/*   Updated: 2023/08/26 09:17:37 by hajarouasla      ###   ########.fr       */
+/*   Updated: 2023/08/27 15:12:19 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 MateriaSource::~MateriaSource(){
 		int k = 0;
 	while(k < 4 && this->inventory[k] == NULL)
-        this->inventory[k++] = NULL;
-    // std::cout << "MateriaSource Destructor called!\n";
+        delete this->inventory[k++];
+    std::cout << "MateriaSource Destructor called!\n";
 }
 
 void MateriaSource::learnMateria(AMateria* src){
@@ -36,11 +36,13 @@ void MateriaSource::learnMateria(AMateria* src){
 
 AMateria*  MateriaSource::createMateria(std::string const & type){
 	int k = 0;
+    AMateria *ret;
     while(k < 4)
     {
-        if (this->inventory[k] && this->inventory[k]->getType().compare(type) == 0)
+        if (this->inventory[k] && this->inventory[k]->getType().compare(type))
         {
-            return (this->inventory[k]->clone());
+            ret = this->inventory[k]->clone();
+            return (ret);
         }
         k++;
     }
@@ -51,7 +53,7 @@ MateriaSource::MateriaSource(){
 	int i = 0;
     while(i < 4)
         this->inventory[i++] = NULL;
-    // std::cout << "Character Default constructor is called!\n";
+    std::cout << "Character Default constructor is called!\n";
 }
 
 MateriaSource::MateriaSource(MateriaSource &src){

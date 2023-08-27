@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cure.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hajarouaslam <hajarouaslam@student.42.f    +#+  +:+       +#+        */
+/*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 14:15:29 by houaslam          #+#    #+#             */
-/*   Updated: 2023/08/26 09:17:58 by hajarouasla      ###   ########.fr       */
+/*   Updated: 2023/08/27 15:10:02 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,20 +23,20 @@ void Cure::use(ICharacter& target){
 
 Cure::Cure(void){
     this->type = "cure";
-    // std::cout << "Cure Default constructor id called!\n";
+    std::cout << "Cure Default constructor id called!\n";
 }
 
 Cure::~Cure(void){
-    // std::cout << "Cure Destructor is called!\n";
+    std::cout << "Cure Destructor is called!\n";
 }
 
 Cure::Cure(Cure& cure){
     *this = cure;
-    // std::cout << "Copy constructor is called!\n";
+    std::cout << "Copy constructor is called!\n";
 }
 
 Cure& Cure::operator=(Cure &cure)
 {
     (void)cure;
-    return *this;
+    return (*this);
 }

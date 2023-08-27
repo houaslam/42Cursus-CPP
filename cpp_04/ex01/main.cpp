@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hajarouaslam <hajarouaslam@student.42.f    +#+  +:+       +#+        */
+/*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/13 15:21:27 by houaslam          #+#    #+#             */
-/*   Updated: 2023/08/26 09:57:23 by hajarouasla      ###   ########.fr       */
+/*   Updated: 2023/08/27 10:54:45 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,22 +17,19 @@
 
 int main()
 {
-    Dog basic;
-    Dog tmp = basic;
-    // const Animal* j = new Dog();
-    // const Animal* i = new Cat();
+    const Animal* j = new Dog();
+    const Animal* i = new Cat();
 
-    // std::cout << std::endl;
-    // std::cout << j->getType() << " " << std::endl;
-    // std::cout << i->getType() << " " << std::endl;
-    // std::cout << std::endl;
+    std::cout << std::endl;
+    std::cout << j->getType() << " " << std::endl;
+    std::cout << i->getType() << " " << std::endl;
+    std::cout << std::endl;
 
-    // i->makeSound(); //will output the cat sound!
-    // j->makeSound();
-    // std::cout << std::endl;
+    i->makeSound(); //will output the cat sound!
+    j->makeSound();
+    std::cout << std::endl;
 
-    // delete j;
-    // delete i;
-    // delete basic;
+    delete j;
+    delete i;
     return 0;
 }

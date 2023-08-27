@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/13 15:08:43 by houaslam          #+#    #+#             */
-/*   Updated: 2023/08/24 10:52:14 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/08/27 10:55:04 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ public :
 	WrongAnimal(std::string type);
 	WrongAnimal(WrongAnimal &to_copy);
 	WrongAnimal& operator=(const WrongAnimal& elem);
-	virtual ~WrongAnimal(void);
+	~WrongAnimal(void);
 //REGULAR FUNCTION
-	virtual void		makeSound() const;
+	void		makeSound() const;
 	void		setType(std::string name);
 	const std::string	&getType(void) const;
 };
