@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Ice.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hajarouaslam <hajarouaslam@student.42.f    +#+  +:+       +#+        */
+/*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 14:07:55 by houaslam          #+#    #+#             */
-/*   Updated: 2023/08/25 13:35:08 by hajarouasla      ###   ########.fr       */
+/*   Updated: 2023/08/27 20:16:08 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ public :
 // CANONICAL FORM
     Ice();
     ~Ice();
-    Ice(Ice &ice);
-    Ice& operator=(Ice &ice);
+    Ice(Ice const &ice);
+    Ice& operator=(Ice const &ice);
 //REGULAR FUNCTION
     virtual AMateria* clone() const;
     virtual void use(ICharacter& target);

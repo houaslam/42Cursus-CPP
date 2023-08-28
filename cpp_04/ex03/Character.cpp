@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/25 04:23:36 by hajarouasla       #+#    #+#             */
-/*   Updated: 2023/08/27 15:10:40 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/08/28 15:20:36 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 Character::~Character(){
 	int k = 0;
-	while(k < 4 && this->inventory[k] == NULL)
+	while(k < 4 && this->inventory[k])
         delete this->inventory[k++];
-    std::cout << "Character Destructor called!\n";
+    // std::cout << "Character Destructor called!\n";
 }
 
 std::string const & Character::getName() const{
@@ -29,7 +29,7 @@ void Character::equip(AMateria* m){
     {
         if (this->inventory[k] == NULL)
         {
-            this->inventory[k] = m;
+            this->inventory[k] = m->clone();
             return ;
         }
         k++;
@@ -60,7 +60,7 @@ Character::Character(){
     int i = 0;
     while(i < 4)
         this->inventory[i++] = NULL;
-    std::cout << "Character Default constructor is called!\n";
+    // std::cout << "Character Default constructor is called!\n";
 }
 
 Character::Character(Character &src){
@@ -71,6 +71,10 @@ Character& Character::operator=(Character &src){
 	this->name = src.name;
 	int k = -1;
 	while(++k < 4)
+    {
+        if (this->inventory[k])
+            delete this->inventory[k];
 		this->inventory[k] = src.inventory[k];
+    }
 	return *this;
 }

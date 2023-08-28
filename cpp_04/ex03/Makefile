@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: hajarouaslam <hajarouaslam@student.42.f    +#+  +:+       +#+         #
+#    By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/24 12:56:11 by houaslam          #+#    #+#              #
-#    Updated: 2023/08/26 09:14:58 by hajarouasla      ###   ########.fr        #
+#    Updated: 2023/08/28 15:25:05 by houaslam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,9 @@ SRC = main.cpp \
 OBJ = ${SRC:.cpp=.o}
 
 all : ${NAME}
+
+%.o : %.cpp
+	c++ -c $< -o $@
 
 ${NAME} : ${OBJ}
 	${CC} ${CFLAGS} ${EXTRA_CFLAGS} ${OBJ} -o ${NAME}

@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/25 03:57:00 by hajarouasla       #+#    #+#             */
-/*   Updated: 2023/08/27 15:12:19 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/08/28 15:22:44 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ MateriaSource::~MateriaSource(){
 		int k = 0;
 	while(k < 4 && this->inventory[k] == NULL)
         delete this->inventory[k++];
-    std::cout << "MateriaSource Destructor called!\n";
+    // std::cout << "MateriaSource Destructor called!\n";
 }
 
 void MateriaSource::learnMateria(AMateria* src){
@@ -39,7 +39,7 @@ AMateria*  MateriaSource::createMateria(std::string const & type){
     AMateria *ret;
     while(k < 4)
     {
-        if (this->inventory[k] && this->inventory[k]->getType().compare(type))
+        if (this->inventory[k] && !this->inventory[k]->getType().compare(type))
         {
             ret = this->inventory[k]->clone();
             return (ret);
@@ -53,7 +53,7 @@ MateriaSource::MateriaSource(){
 	int i = 0;
     while(i < 4)
         this->inventory[i++] = NULL;
-    std::cout << "Character Default constructor is called!\n";
+    // std::cout << "Character Default constructor is called!\n";
 }
 
 MateriaSource::MateriaSource(MateriaSource &src){

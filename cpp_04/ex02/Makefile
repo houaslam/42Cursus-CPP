@@ -6,7 +6,7 @@
 #    By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/13 14:57:02 by houaslam          #+#    #+#              #
-#    Updated: 2023/08/24 12:43:57 by houaslam         ###   ########.fr        #
+#    Updated: 2023/08/28 15:07:34 by houaslam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,6 +25,9 @@ SRCS = main.cpp \
 OBJ = ${SRCS:.cpp=.o}
 
 all : ${NAME}
+
+%.o : %.cpp
+	c++ -c $< -o $@
 
 ${NAME} : ${OBJ}
 	${CC} ${CFLAGS} ${EXTRA_FLAGS} ${OBJ} -o ${NAME}
