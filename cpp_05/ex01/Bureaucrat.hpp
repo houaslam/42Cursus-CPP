@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/28 16:20:53 by houaslam          #+#    #+#             */
-/*   Updated: 2023/08/28 17:06:25 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/09/12 18:01:29 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,17 @@
 #define BUREAUCRAT_HPP
 
 #include <iostream>
+#include <exception>
+
+class GradeTooHighException : public std::exception{
+    public :
+    const char *what();
+};
+
+class GradeTooLowException : public std::exception{
+    public :
+    const char *what();
+};
 
 class Bureaucrat{
 private :
@@ -22,6 +33,8 @@ private :
 public :
     std::string getName() const;
     int getGrade() const;
+    void increment();
+    void decrement();
     Bureaucrat();
     ~Bureaucrat();
     Bureaucrat(const std::string name, int grade);
