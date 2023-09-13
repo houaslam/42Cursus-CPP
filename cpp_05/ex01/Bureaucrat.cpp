@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/28 16:20:51 by houaslam          #+#    #+#             */
-/*   Updated: 2023/09/13 13:00:37 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/09/13 16:40:16 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ std::ostream& operator<<(std::ostream& out , Bureaucrat bureau){
     return out;
 }
 
-void Bureaucrat::signForm(Form form){
+void Bureaucrat::signForm(Form &form){
     if (form.GetSignStatus() == true)
         std::cout << this->getName() << " signed " << form.GetName() << std::endl;
     else

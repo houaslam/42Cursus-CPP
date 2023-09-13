@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 11:02:55 by houaslam          #+#    #+#             */
-/*   Updated: 2023/09/13 16:07:13 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/09/13 16:49:54 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,6 @@ private:
   const int exec_grade;
   const std::string name;
 public :
-    ~Form();
-    Form();
-    Form(const char*name, int sign);
     const int GetExec() const;
     bool GetSignStatus() const;
     virtual void execute(Bureaucrat  , int exec);

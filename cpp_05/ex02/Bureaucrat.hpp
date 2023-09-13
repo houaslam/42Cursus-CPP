@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/28 16:20:53 by houaslam          #+#    #+#             */
-/*   Updated: 2023/09/13 14:42:15 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/09/13 16:48:42 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include <iostream>
 #include <exception>
-#include "Form.hpp"
+#include "AForm.hpp"
 
 class Form;
 
@@ -39,7 +39,8 @@ public :
     int getGrade() const;
     void increment();
     void decrement();
-    void signForm(Form form);
+    void signForm(Form &form);
+    void executeForm(Form const &form);
     //DESTRUCTOR AND CONSTRUCTORE
     Bureaucrat();
     ~Bureaucrat();

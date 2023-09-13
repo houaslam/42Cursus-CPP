@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/28 16:20:53 by houaslam          #+#    #+#             */
-/*   Updated: 2023/09/13 11:42:22 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/09/13 16:40:12 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ public :
     int getGrade() const;
     void increment();
     void decrement();
-    void signForm(Form form);
+    void signForm(Form &form);
     //DESTRUCTOR AND CONSTRUCTORE
     Bureaucrat();
     ~Bureaucrat();
