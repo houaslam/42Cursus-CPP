@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/28 16:20:51 by houaslam          #+#    #+#             */
-/*   Updated: 2023/09/12 18:00:01 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/09/13 12:54:24 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,14 @@ void Bureaucrat::increment(){
     if (this->grade > 1)
         this->grade--;
     else
-        throw "grade is too high\n";
+        throw GradeTooHighException();
 }
 
 void Bureaucrat::decrement(){
         if (this->grade < 150)
             this->grade++;
         else
-            throw "the grade is too low\n";
+            throw GradeTooLowException();
     }
 
 const char *GradeTooHighException::what(){

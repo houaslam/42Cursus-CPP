@@ -1,30 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ShrubberyCreationForm.cpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/28 16:20:56 by houaslam          #+#    #+#             */
-/*   Updated: 2023/09/13 12:05:16 by houaslam         ###   ########.fr       */
+/*   Created: 2023/09/13 16:00:45 by houaslam          #+#    #+#             */
+/*   Updated: 2023/09/13 16:11:35 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
-#include "Form.hpp"
+#include "ShrubberyCreationForm.hpp"
 
-int main()
-{
-    try{
-        Form form("smtg", 5, 8);
-        Bureaucrat bureau("florence", 4);
-        form.beSigned(bureau);
-        bureau.signForm(form);
-    }
-    catch(GradeTooHighException &exep){
-        std::cout << "exep : " << exep.what();
-    }
-    catch(GradeTooLowException &exep){
-        std::cout << "exep : " << exep.what();
-    }
+void ShrubberyCreationForm::execute(Bureaucrat const &executor) const{
+	ofstream out;
+	if (this->GetExec() <= 137)
+		out.open(executor + "_shrubbery");
+	else
+		throw GradeTooLowException();
 }

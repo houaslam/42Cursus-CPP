@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/28 16:20:56 by houaslam          #+#    #+#             */
-/*   Updated: 2023/09/13 12:05:16 by houaslam         ###   ########.fr       */
+/*   Created: 2023/09/13 14:02:33 by houaslam          #+#    #+#             */
+/*   Updated: 2023/09/13 16:05:59 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
+#ifndef SHRUBBERYCREATIONFORM_HPP
+#define SHRUBBERYCREATIONFORM_HPP
+
+#include <stdbool.h>
+#include <iostream>
 #include "Form.hpp"
 
-int main()
-{
-    try{
-        Form form("smtg", 5, 8);
-        Bureaucrat bureau("florence", 4);
-        form.beSigned(bureau);
-        bureau.signForm(form);
-    }
-    catch(GradeTooHighException &exep){
-        std::cout << "exep : " << exep.what();
-    }
-    catch(GradeTooLowException &exep){
-        std::cout << "exep : " << exep.what();
-    }
-}
+class ShrubberyCreationForm : public : Form{
+public :
+    void execute(Bureaucrat const &executor) const
+    ShrubberyCreationForm(Bureacrat person);
+    ~ShrubberyCreationForm();
+};
+
+#endif
