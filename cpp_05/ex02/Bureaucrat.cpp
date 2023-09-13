@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hajarouaslam <hajarouaslam@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/28 16:20:51 by houaslam          #+#    #+#             */
-/*   Updated: 2023/09/13 16:47:18 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/09/13 17:06:53 by hajarouasla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ std::ostream& operator<<(std::ostream& out , Bureaucrat bureau){
     return out;
 }
 
-void Bureaucrat::signForm(Form &form){
+void Bureaucrat::signForm(AForm &form){
     if (form.GetSignStatus() == true)
         std::cout << this->getName() << " signed " << form.GetName() << std::endl;
     else
@@ -73,9 +73,15 @@ void Bureaucrat::signForm(Form &form){
 }
 
 
-void Bureaucrat::executeForm(Form const &form){
+void Bureaucrat::executeForm(AForm const &form){
     try{
         form.execute(*this);
         std::cout << this->getName() << " executed " << form.GetName();
         }
+    catch(GradeTooHighException &exep){
+        std::cout << "exep : " << exep.what();
+    }
+    catch(GradeTooLowException &exep){
+        std::cout << "exep : " << exep.what();
+    }
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hajarouaslam <hajarouaslam@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 14:02:33 by houaslam          #+#    #+#             */
-/*   Updated: 2023/09/13 16:55:58 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/09/13 17:04:39 by hajarouasla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@
 #include "AForm.hpp"
 #include "Bureaucrat.hpp"
 
-class ShrubberyCreationForm : public  Form{
+class ShrubberyCreationForm : public  AForm{
 public :
-    void execute(Bureaucrat const &executor) const
-    ShrubberyCreationForm(Bureacrat person);
+    void execute(Bureaucrat const &executor) const;
+    ShrubberyCreationForm(Bureaucrat person);
     ~ShrubberyCreationForm();
 };
 

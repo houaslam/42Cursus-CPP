@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hajarouaslam <hajarouaslam@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 14:01:41 by houaslam          #+#    #+#             */
-/*   Updated: 2023/09/13 16:55:10 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/09/13 17:04:18 by hajarouasla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #include <iostream>
 #include "AForm.hpp"
 
-class RobotomyRequestForm : public  Form{
+class RobotomyRequestForm : public  AForm{
 public :
     void execute(Bureaucrat const &executor) const;
     RobotomyRequestForm(Bureaucrat person);

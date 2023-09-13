@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ShrubberyCreationForm.cpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hajarouaslam <hajarouaslam@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 16:00:45 by houaslam          #+#    #+#             */
-/*   Updated: 2023/09/13 16:36:14 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/09/13 17:11:34 by hajarouasla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ShrubberyCreationForm.hpp"
 
 void ShrubberyCreationForm::execute(Bureaucrat const &executor) const{
-	ofstream out;
+	std::ofstream my_stream;
 	if (this->GetExec() <= 137 && this->GetSignStatus() == true)
-		out.open(executor + "_shrubbery");
+		my_stream.open(executor.getName() + "_shrubbery");
 	else
 		throw GradeTooLowException();
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hajarouaslam <hajarouaslam@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/28 16:20:56 by houaslam          #+#    #+#             */
-/*   Updated: 2023/09/13 16:51:05 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/09/13 17:05:25 by hajarouasla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@
 int main()
 {
     try{
-        Form form("smtg", 5, 8);
         Bureaucrat bureau("florence", 4);
+        RobotomyRequestForm form(bureau);
         form.beSigned(bureau);
         bureau.signForm(form);
     }

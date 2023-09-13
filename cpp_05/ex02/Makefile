@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+         #
+#    By: hajarouaslam <hajarouaslam@student.42.f    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/28 16:20:04 by houaslam          #+#    #+#              #
-#    Updated: 2023/09/13 16:48:20 by houaslam         ###   ########.fr        #
+#    Updated: 2023/09/13 17:07:06 by hajarouasla      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ EXTRA_CFLAGS = -std=c++98
 
 SRC = main.cpp \
 	  Bureaucrat.cpp\
-	  Form.cpp \
+	  AForm.cpp \
 	  PresidentialPardonForm.cpp\
 	  RobotomyRequestForm.cpp\
  	  ShrubberyCreationForm.cpp
