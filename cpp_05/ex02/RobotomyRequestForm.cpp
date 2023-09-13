@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 16:12:53 by houaslam          #+#    #+#             */
-/*   Updated: 2023/09/13 16:30:22 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/09/13 17:28:05 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,3 +22,13 @@ void RobotomyRequestForm::execute(Bureaucrat const &executor) const{
     else
         std::cout << "robotomy failed" << std::endl;
 }
+
+RobotomyRequestForm::RobotomyRequestForm(Bureaucrat &person){
+    std::cout << person.getName();
+}
+
+RobotomyRequestForm::~RobotomyRequestForm(){
+        std::cout << "ntg\n";
+}
+
+
