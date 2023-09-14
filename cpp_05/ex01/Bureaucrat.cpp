@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/28 16:20:51 by houaslam          #+#    #+#             */
-/*   Updated: 2023/09/13 16:40:16 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/09/14 12:03:34 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,12 +38,11 @@ std::string Bureaucrat::getName() const{
     return this->name;
 }
 
-
 int Bureaucrat::getGrade() const{
     return this->grade;
 }
 
-Bureaucrat::Bureaucrat() : name(NULL) , grade(0){
+Bureaucrat::Bureaucrat() : name("") , grade(0){
     // std::cout << "Bureaucrat Default constructor called!\n";
 }
 
@@ -72,3 +71,7 @@ void Bureaucrat::signForm(Form &form){
         std::cout << this->getName() << " couldn t sign " << form.GetName() << " because the grade ain t enough\n";
 }
 
+Bureaucrat::Bureaucrat(Bureaucrat &to_cpy) : name(to_cpy.name){
+    this->grade = to_cpy.grade;
+    std::cout << "Bureaucrat copy constructore called!\n";
+}

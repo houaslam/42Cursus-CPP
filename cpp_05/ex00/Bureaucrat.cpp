@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/28 16:20:51 by houaslam          #+#    #+#             */
-/*   Updated: 2023/09/13 12:54:24 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/09/14 12:03:05 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int Bureaucrat::getGrade() const{
     return this->grade;
 }
 
-Bureaucrat::Bureaucrat() : name(NULL) , grade(0){
+Bureaucrat::Bureaucrat() : name("") , grade(0){
     std::cout << "Bureaucrat Default constructor called!\n";
 }
 
@@ -62,4 +62,9 @@ Bureaucrat::Bureaucrat(const std::string name, int grade) : name(name){
 std::ostream& operator<<(std::ostream& out , Bureaucrat bureau){
     out << bureau.getName() <<" , bureaucrat grade " << bureau.getGrade() << " .\n";
     return out;
+}
+
+Bureaucrat::Bureaucrat(Bureaucrat &to_cpy) : name(to_cpy.name){
+    this->grade = to_cpy.grade;
+    std::cout << "Bureaucrat copy constructore called!\n";
 }

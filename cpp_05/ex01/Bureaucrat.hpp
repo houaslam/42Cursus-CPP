@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/28 16:20:53 by houaslam          #+#    #+#             */
-/*   Updated: 2023/09/13 16:40:12 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/09/14 11:40:48 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ public :
     //DESTRUCTOR AND CONSTRUCTORE
     Bureaucrat();
     ~Bureaucrat();
+    Bureaucrat(Bureaucrat &to_cpy);
     Bureaucrat(const std::string name, int grade);
 };
 std::ostream& operator<<(std::ostream& out , Bureaucrat bureau);
