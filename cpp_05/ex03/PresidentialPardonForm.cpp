@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 13:58:36 by houaslam          #+#    #+#             */
-/*   Updated: 2023/09/14 12:16:21 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/09/16 12:54:18 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void PresidentialPardonForm::execute(Bureaucrat const &executor) const{
     if (this->GetSignStatus() != true)
         throw FormNotSigned();
     if (executor.getGrade() <= this->GetExec())
-        std::cout << executor.getName() << "has benn pardoned by Zaphod Beeblebrox" << std::endl;
+        std::cout << executor.getName() << " has been pardoned by Zaphod Beeblebrox" << std::endl;
     else
         throw GradeTooHighException();   
 

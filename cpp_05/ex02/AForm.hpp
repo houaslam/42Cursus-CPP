@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 11:02:55 by houaslam          #+#    #+#             */
-/*   Updated: 2023/09/14 12:24:16 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/09/16 13:42:10 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ private:
 public :
     // REGULAR FUNCTION
     AForm();
-    ~AForm();
+    virtual ~AForm();
     AForm(AForm &form);
     AForm(const std::string name, int sign , int exec);
     const std::string GetName() const;

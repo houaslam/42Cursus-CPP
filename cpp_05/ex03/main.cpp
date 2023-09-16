@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/28 16:20:56 by houaslam          #+#    #+#             */
-/*   Updated: 2023/09/14 15:56:24 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/09/16 13:46:04 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,11 @@ int main()
     Bureaucrat person("florence", 5);
     Intern someRandomIntern;
     AForm* rrf;
-    rrf = someRandomIntern.makeForm("robotomy form", "Bender");
+    rrf = someRandomIntern.makeForm("presidenvtial form", "Bender");
     rrf->beSigned(person);
     rrf->execute(person);
     delete rrf;
+    // std::cout << rrf << std::endl;
 }
     }
     catch(GradeTooHighException &exep){
