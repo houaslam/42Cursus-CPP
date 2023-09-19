@@ -1,36 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScalarConverter.hpp                                :+:      :+:    :+:   */
+/*   Base.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/16 16:48:32 by houaslam          #+#    #+#             */
-/*   Updated: 2023/09/19 12:00:41 by houaslam         ###   ########.fr       */
+/*   Created: 2023/09/18 19:22:12 by houaslam          #+#    #+#             */
+/*   Updated: 2023/09/19 13:59:41 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCALARCONVERTER
-#define SCALARCONVERTER
+
+#ifndef BASE_HPP
+#define BASE_HPP
 
 #include <iostream>
 #include <string>
-#include <iomanip>
-#include <stdlib.h>
 #include <exception>
+#include<cstdlib>
 
-
-class Invalid : public std::exception{
-  const char *what();
-};
-
-class ScalarConveter{
+class Base{
 public :
-  static void method(const char* base);
-  ScalarConveter();
-  ScalarConveter(ScalarConveter &to_cpy);
-  ScalarConveter& operator=(ScalarConveter &to_cpy);
-  ~ScalarConveter();
+  virtual ~Base();  
 };
+
+
+Base * generate(void);
+void identify(Base* p);
+void identify(Base& p);
 
 #endif

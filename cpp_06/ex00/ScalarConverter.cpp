@@ -6,17 +6,34 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 17:49:03 by houaslam          #+#    #+#             */
-/*   Updated: 2023/09/17 16:58:46 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/09/19 12:25:43 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScalarConverter.hpp"
 
+ScalarConveter::ScalarConveter(){
+    std::cout << "ScalarConverter Default constructore called!\n";
+}
+  
+ScalarConveter::ScalarConveter(ScalarConveter &to_cpy){
+	std::cout << "Copy constructore Called!\n";
+}
+  
+ScalarConveter& ScalarConveter::operator=(ScalarConveter &to_cpy){
+	return *this;
+}
+
+ScalarConveter::~ScalarConveter(){
+	std::cout << "Scalar Destructore called!\n";
+}
+
+
 void ScalarConveter::method(const char* base){
     std::cout << std::fixed << std::setprecision(2);
 	try{
         std::cout << "char = '";
-        char c_value = (char)std::stoi(base);
+        char c_value = static_cast<char>(std::stoi(base));
         if (c_value <= 31)
 			std::cout << "non displayable'" << std::endl;
 		else
