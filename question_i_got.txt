@@ -178,10 +178,28 @@ ANSWER ->
     the compiler will refuse to let you create an object 
     for it and will show an error message if you try.
 }
-QUESTION = 
-ANSWER ->
-QUESTION = 
-ANSWER ->
+QUESTION = WHAT IS THE difference bettween EACH TYPECAST?
+ANSWER ->{
+    dynamic_cast <new_type> (expression){
+        used with pointers and references to classes (or with void*)
+        safe at runtime
+    }
+    reinterpret_cast <new_type> (expression){
+        used to convert pointer type to any other pointer type
+    }
+    static_cast <new_type> (expression){
+        used between pointers to related classes
+        safe at compile time
+    }
+    const_cast <new_type> (expression){
+        used to manipulates the constness of the object pointed by a pointer,
+    }
+}
+QUESTION = WHAT IS THE difference bettween IMPLICIT AND EXPLICIT CONVERSION?
+ANSWER ->{
+    "Casting" is an explicit conversion.
+    IMPLICIT HAPPENS AUTOMATICALLY BY assign
+}
 QUESTION = 
 ANSWER ->
 QUESTION = 

@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 11:02:50 by houaslam          #+#    #+#             */
-/*   Updated: 2023/09/14 12:08:56 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/09/17 14:44:55 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ Form::Form() : sign_grade(0), exec_grade(0), name(""), _sign(false){
     // std::cout << "Form default constructore called!\n";
 }
 
-Form::Form(const char*name, int sign , int exec) : 
+Form::Form(std::string name, int sign , int exec) : 
 sign_grade(sign), exec_grade(exec), name(name), _sign(false){
     if (sign_grade > 150 || exec_grade > 150)
         throw GradeTooLowException();

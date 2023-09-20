@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 19:22:12 by houaslam          #+#    #+#             */
-/*   Updated: 2023/09/19 15:22:20 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/09/20 13:49:00 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ Base::~Base(){
 }
 
 Base * generate(void){
+  srand(time(NULL));
   int i = rand()%10;
 
   std::cout << "i = " << i << std::endl;
