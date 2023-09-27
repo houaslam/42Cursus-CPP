@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hajarouaslam <hajarouaslam@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 12:44:48 by houaslam          #+#    #+#             */
-/*   Updated: 2023/09/20 13:48:37 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/09/20 15:08:23 by hajarouasla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,6 @@
 int main(){
     Base *base = generate();
     identify(base);
+    identify(*base);
     delete base;
 }

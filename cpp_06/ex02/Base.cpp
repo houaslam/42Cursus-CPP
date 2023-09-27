@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Base.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hajarouaslam <hajarouaslam@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 19:22:12 by houaslam          #+#    #+#             */
-/*   Updated: 2023/09/20 13:49:00 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/09/20 15:11:51 by hajarouasla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,17 +24,10 @@ Base * generate(void){
   srand(time(NULL));
   int i = rand()%10;
 
-  std::cout << "i = " << i << std::endl;
   if (i%2 == 0)
-  {
-    std::cout << "A\n";
     return new A;
-  }
   else if (i%5 == 0)
-  {
-    std::cout << "B\n";
     return new B;
-  }
   std::cout << "C\n";
   return new C;
 }
@@ -52,21 +45,21 @@ void identify(Base* p){
 
 void identify(Base& p){
   try{
-    dynamic_cast<A &>(p);
+    A& test = dynamic_cast<A &>(p);
     std::cout <<"It s a type!\n";
   }
   catch(std::bad_cast){
     std::cout << "";
   }
   try{
-    dynamic_cast<B &>(p);
+    B& test = dynamic_cast<B &>(p);
     std::cout <<"It s b type!\n";
   }
   catch(std::bad_cast){
     std::cout << "";
   }
   try{
-    dynamic_cast<C &>(p);
+    C& test = dynamic_cast<C &>(p);
     std::cout <<"It s c type!\n";
   }
   catch(std::bad_cast){
