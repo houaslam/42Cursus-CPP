@@ -1,6 +1,6 @@
 NAME = Iter
 CC = c++
-# CC += -fsanitize=address -g3
+CC += -fsanitize=address -g3
 CFLAGS = -Wall -Wextra -Werror
 EXTRA_CFLAGS = -std=c++98
 

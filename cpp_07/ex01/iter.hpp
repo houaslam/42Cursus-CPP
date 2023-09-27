@@ -6,6 +6,7 @@
 
 template <typename T>
 void iter(T *array, unsigned int size, void (*f)(T &)){
+    
     int i = 0;
     while (i < size)
         f(array[i++]);

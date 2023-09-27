@@ -1,4 +1,5 @@
 #include "iter.hpp"
+#include <string.h>
 
 template< typename T >
 void aff( T& x )
@@ -14,7 +15,7 @@ void add(T &nb){
 
 int main(){
   int t[5] = {0,2,4,5,9};
-  char *c = strdup("hello");
+  char c[] = "hello";
   int k = 0;
 
   iter<int>(t, 5, add);
@@ -28,6 +29,4 @@ int main(){
 
   while(k < 5)
     std::cout << c[k++] << "\t";
-  
-  delete[] c;
 }
