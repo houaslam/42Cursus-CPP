@@ -3,6 +3,10 @@
 
 #include <iostream>
 #include <array>
+#include <vector>
+#include <list>
+#include <deque>
+#include <forward_list>	
 #include <exception>
 
 class ElementNotFound : public std::exception{
@@ -12,14 +16,14 @@ public :
     }
 };
 
-template <typename i>
-int easyfind(i elem, int b){
-    int k = 0;
-    while(k < elem.size())
+template <typename container>
+int easyfind(container& elem, int b){
+    typename container::const_iterator pos = elem.begin();
+    while(pos != elem.end())
     {
-        if (elem.at(k) == b)
-            return b;
-        k++;
+        if (*pos == b)
+            return *pos;
+        pos++;
     }
     throw ElementNotFound();
 }

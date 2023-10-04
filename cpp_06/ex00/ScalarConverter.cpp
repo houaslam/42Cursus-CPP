@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 17:49:03 by houaslam          #+#    #+#             */
-/*   Updated: 2023/09/19 12:25:43 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/09/29 17:22:23 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void ScalarConveter::method(const char* base){
         	std::cout << c_value <<  "\'"<< std::endl;
 	}
     catch (std::invalid_argument){
-        std::cout << "impossible'\n";
+        std::cerr << "impossible'\n";
     }
     try{
     	std::cout << "int = ";
@@ -48,7 +48,7 @@ void ScalarConveter::method(const char* base){
 		std::cout <<  i_value << std::endl;
 	}
     catch (std::invalid_argument){
-        std::cout << "impossible\n";
+        std::cerr << "impossible\n";
     }
     try{
         std::cout << "float = " ;
@@ -56,7 +56,7 @@ void ScalarConveter::method(const char* base){
 		std::cout << f_value << "f" << std::endl;
 	}
     catch (std::invalid_argument){
-        std::cout << "impossible\n";
+        std::cerr << "impossible\n";
     }
 	try{
         std::cout << "double = ";
@@ -64,6 +64,6 @@ void ScalarConveter::method(const char* base){
         std::cout << d_value << std::endl;
 	}
     catch (std::invalid_argument){
-        std::cout << "impossible\n";
+        std::cerr << "impossible\n";
     }
 }

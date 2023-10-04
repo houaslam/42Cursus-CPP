@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Base.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hajarouaslam <hajarouaslam@student.42.f    +#+  +:+       +#+        */
+/*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 19:22:12 by houaslam          #+#    #+#             */
-/*   Updated: 2023/09/20 15:11:51 by hajarouasla      ###   ########.fr       */
+/*   Updated: 2023/09/29 17:22:40 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,20 +49,20 @@ void identify(Base& p){
     std::cout <<"It s a type!\n";
   }
   catch(std::bad_cast){
-    std::cout << "";
+    std::cerr << "";
   }
   try{
     B& test = dynamic_cast<B &>(p);
     std::cout <<"It s b type!\n";
   }
   catch(std::bad_cast){
-    std::cout << "";
+    std::cerr << "";
   }
   try{
     C& test = dynamic_cast<C &>(p);
     std::cout <<"It s c type!\n";
   }
   catch(std::bad_cast){
-    std::cout << "";
+    std::cerr << "";
   }
 }

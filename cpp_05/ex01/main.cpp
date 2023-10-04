@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/28 16:20:56 by houaslam          #+#    #+#             */
-/*   Updated: 2023/09/13 12:05:16 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/09/29 17:21:23 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ int main()
         bureau.signForm(form);
     }
     catch(GradeTooHighException &exep){
-        std::cout << "exep : " << exep.what();
+        std::cerr << "exep : " << exep.what();
     }
     catch(GradeTooLowException &exep){
-        std::cout << "exep : " << exep.what();
+        std::cerr << "exep : " << exep.what();
     }
 }

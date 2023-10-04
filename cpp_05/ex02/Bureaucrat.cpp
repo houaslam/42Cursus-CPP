@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/28 16:20:51 by houaslam          #+#    #+#             */
-/*   Updated: 2023/09/14 12:11:18 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/09/29 17:21:33 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,10 +77,10 @@ void Bureaucrat::executeForm(AForm const &form){
         std::cout << this->getName() << " executed " << form.GetName() << std::endl;
         }
     catch(GradeTooHighException &exep){
-        std::cout << "exep : " << exep.what();
+        std::cerr << "exep : " << exep.what();
     }
     catch(GradeTooLowException &exep){
-        std::cout << "exep : " << exep.what();
+        std::cerr << "exep : " << exep.what();
     }
 }
 

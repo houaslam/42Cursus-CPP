@@ -6,17 +6,18 @@
 #    By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/28 16:20:04 by houaslam          #+#    #+#              #
-#    Updated: 2023/09/29 16:51:33 by houaslam         ###   ########.fr        #
+#    Updated: 2023/09/29 16:51:59 by houaslam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = easyfind
+NAME = Span
 CC = c++
 CC += -fsanitize=address -g3
 CFLAGS = -Wall -Wextra -Werror
 EXTRA_CFLAGS = -std=c++98
 
-SRC = main.cpp 
+SRC = main.cpp \
+	  Span.cpp
 
 OBJ = ${SRC:.cpp=.o}
 
