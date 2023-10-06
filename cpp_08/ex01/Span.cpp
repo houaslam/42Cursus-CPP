@@ -35,25 +35,40 @@ void Span::addNumber(int nb){
 		throw NoSpaceLeft();
 }
 
-void Span::addRange(std::array<int> range, int size){
-	int i = 0;
-	std::array<int>::iterator pos = this->range.begin();
-	
-	while(pos != range.end() && i < size && size > 0)
-	{
-		addNumber(range[i++]);
-		pos++;
-	}
-}
-
-
-int Span::shortSpan(){
+int Span::shortestSpan(){
 	int res;
-	return 1;
+	unsigned int size = storage.size();
+	int k = 0;
+
+	std::vector<int> c(storage);
+	std::sort(c.begin(), c.end());
+	res = c.at(1) - c.at(0);
+	while(k + 1 < size){
+		if (c.at(k) - c.at(k + 1) < res)
+			res = c.at(k) - c.at(k + 1) ;
+		k++;
+	}
+	return (res);
 }
 
-int Span::LongestSpan(){
-	return 0;
+int Span::longestSpan(){
+	int res = INT8_MIN;
+	int i = 0;
+	int j;
+	unsigned int size = storage.size();
+
+	while(i < size)
+	{
+		j = 0;
+		while(j < size)
+		{
+			if (abs(storage.at(i) - storage.at(j)) > res && i != j)
+				res = storage.at(i) - storage.at(j);
+			j++;
+		}
+		i++;
+	}
+	return (abs(res));
 }
 
 

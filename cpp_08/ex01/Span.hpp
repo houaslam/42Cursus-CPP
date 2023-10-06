@@ -4,6 +4,8 @@
 #include <iostream>
 #include <vector>
 #include <array>
+#include <stack>
+#include <algorithm>
 #include <exception>
 
 class NoSpaceLeft: public std::exception{
@@ -23,9 +25,9 @@ public :
     Span& operator=(Span& ref);
 
     void addNumber(int nb);
-    int shortSpan();
-    int LongestSpan();
-    void addRange(int* range, int size);
+    int shortestSpan();
+    int longestSpan();
+    // void addRange(std::vector<int>iterator& start, std::vector<int>iterator& end);
 };
 
 #endif
