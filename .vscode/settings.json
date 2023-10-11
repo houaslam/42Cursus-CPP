@@ -70,7 +70,9 @@
     "variant": "cpp",
     "compare": "cpp",
     "concepts": "cpp",
-    "*.tcc": "cpp"
+    "*.tcc": "cpp",
+    "forward_list": "cpp",
+    "list": "cpp"
   },
   "C_Cpp_Runner.cCompilerPath": "clang",
   "C_Cpp_Runner.cppCompilerPath": "clang++",
