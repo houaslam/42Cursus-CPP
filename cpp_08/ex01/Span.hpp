@@ -18,7 +18,7 @@ private :
     unsigned long int nb;
     std::vector<int> storage;
 public :
-    Span(unsigned long int nb);
+    Span(int nb);
     ~Span();
     Span();
     Span(Span& ref);
@@ -27,7 +27,7 @@ public :
     void addNumber(int nb);
     int shortestSpan();
     int longestSpan();
-    // void addRange(std::vector<int>iterator& start, std::vector<int>iterator& end);
+    void addRange(std::vector<int>::iterator& start, std::vector<int>::iterator& end);
 };
 
 #endif

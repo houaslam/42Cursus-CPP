@@ -1,6 +1,6 @@
 #include "Span.hpp"
 
-Span::Span(unsigned long int nb) : nb(nb){
+Span::Span(int nb) : nb(nb){
 	std::cout << "Span parameter constructor called!\n";
 }
 
@@ -17,6 +17,7 @@ Span::Span(Span& ref){
 }
 
 Span& Span::operator=(Span& ref){
+	std::cout << "assingnment operator called!\n";
 	this->nb = ref.nb;
 	return *this;
 }
@@ -44,31 +45,27 @@ int Span::shortestSpan(){
 	std::sort(c.begin(), c.end());
 	res = c.at(1) - c.at(0);
 	while(k + 1 < size){
-		if (c.at(k) - c.at(k + 1) < res)
-			res = c.at(k) - c.at(k + 1) ;
+		if (c.at(k + 1) - c.at(k) < res)
+			res = c.at(k + 1) - c.at(k) ;
 		k++;
 	}
 	return (res);
 }
 
 int Span::longestSpan(){
-	int res = INT8_MIN;
-	int i = 0;
-	int j;
-	unsigned int size = storage.size();
+	int res;
 
-	while(i < size)
-	{
-		j = 0;
-		while(j < size)
-		{
-			if (abs(storage.at(i) - storage.at(j)) > res && i != j)
-				res = storage.at(i) - storage.at(j);
-			j++;
-		}
-		i++;
-	}
+	std::vector<int> c(storage);
+	std::sort(c.begin(), c.end());
+	res = c.at(storage.size() - 1) - c.at(0);
 	return (abs(res));
 }
 
-
+void Span::addRange(std::vector<int>::iterator& start, std::vector<int>::iterator& end)
+{
+	while(start != end)
+	{
+		addNumber(*start);
+		start++;
+	}
+}
