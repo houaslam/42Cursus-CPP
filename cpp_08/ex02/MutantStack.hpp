@@ -6,8 +6,13 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 18:18:40 by houaslam          #+#    #+#             */
-/*   Updated: 2023/10/11 18:18:54 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/10/12 14:08:11 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MUTANTS
+#ifndef MUTANTSTACK_HPP
+#define MUTANTSTACK_HPP
+
+
+
+#endif
