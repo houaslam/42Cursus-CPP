@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/28 16:20:56 by houaslam          #+#    #+#             */
-/*   Updated: 2023/09/29 17:22:04 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/10/13 14:07:57 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,23 +25,29 @@ int main()
     Bureaucrat person("florence", 5);
     Intern someRandomIntern;
     AForm* rrf;
-    rrf = someRandomIntern.makeForm("presidenvtial form", "Bender");
+    rrf = someRandomIntern.makeForm("shrubbery form", "Bender");
     rrf->beSigned(person);
     rrf->execute(person);
     delete rrf;
     // std::cout << rrf << std::endl;
 }
     }
-    catch(GradeTooHighException &exep){
+    catch(Bureaucrat::GradeTooHighException &exep){
         std::cerr << "exep : " << exep.what();
     }
-    catch(GradeTooLowException &exep){
+    catch(Bureaucrat::GradeTooLowException &exep){
         std::cerr << "exep : " << exep.what();
     }
-    catch(FormNotSigned &exep){
+    catch(AForm::GradeTooHighException &exep){
         std::cerr << "exep : " << exep.what();
     }
-    catch(FormNotFound &exep){
+    catch(AForm::GradeTooLowException &exep){
+        std::cerr << "exep : " << exep.what();
+    }
+    catch(AForm::FormNotSigned &exep){
+        std::cerr << "exep : " << exep.what();
+    }
+    catch(Intern::FormNotFound &exep){
         std::cerr << "exep : " << exep.what();
     }
 }

@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 11:02:50 by houaslam          #+#    #+#             */
-/*   Updated: 2023/09/14 12:26:12 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/10/13 14:05:03 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,21 @@
 
 AForm::AForm(AForm &form)
 : _sign(form._sign) , sign_grade(form.sign_grade) , exec_grade(form.exec_grade), name(form.name){
-    std::cout << "AForm Default constructore called!\n ";
+    // std::cout << "AForm Default constructore called!\n ";
 }
 
-const char* FormNotSigned::what(){
+const char* AForm::FormNotSigned::what(){
     return "form not signed\n";
 }
+
+const char *AForm::GradeTooHighException::what(){
+    return "form grade is too high\n";
+}
+
+const char *AForm::GradeTooLowException::what(){
+        return "form grade is too low\n";
+}
+
 
 AForm::~AForm(){
     // std::cout << "AForm default constructore called!\n";
@@ -32,9 +41,9 @@ AForm::AForm() : sign_grade(0), exec_grade(0), name(""), _sign(false){
 AForm::AForm(const std::string name, int sign , int exec) : 
 sign_grade(sign), exec_grade(exec), name(name), _sign(false){
     if (sign_grade > 150 || exec_grade > 150)
-        throw GradeTooLowException();
+        throw AForm::GradeTooLowException();
     if (sign_grade < 1 || exec_grade < 1)
-        throw GradeTooHighException();
+        throw AForm::GradeTooHighException();
     // std::cout << "AForm parameter constructore called!\n";
 }
 

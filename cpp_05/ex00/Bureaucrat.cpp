@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/28 16:20:51 by houaslam          #+#    #+#             */
-/*   Updated: 2023/09/14 12:03:05 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/10/12 18:47:22 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,12 @@ void Bureaucrat::decrement(){
             throw GradeTooLowException();
     }
 
-const char *GradeTooHighException::what(){
-    return "grade is too high\n";
+const char *Bureaucrat::GradeTooHighException::what(){
+    return "bureaucrat grade is too high\n";
 }
 
-const char *GradeTooLowException::what(){
-        return "grade is too low\n";
+const char *Bureaucrat::GradeTooLowException::what(){
+        return "bureaucrat grade is too low\n";
 }
 
 std::string Bureaucrat::getName() const{
@@ -43,11 +43,11 @@ int Bureaucrat::getGrade() const{
 }
 
 Bureaucrat::Bureaucrat() : name("") , grade(0){
-    std::cout << "Bureaucrat Default constructor called!\n";
+    // std::cout << "Bureaucrat Default constructor called!\n";
 }
 
 Bureaucrat::~Bureaucrat(){
-    std::cout << "Bureaucrat Destructor called!\n";
+    // std::cout << "Bureaucrat Destructor called!\n";
 }
 
 Bureaucrat::Bureaucrat(const std::string name, int grade) : name(name){
@@ -56,7 +56,7 @@ Bureaucrat::Bureaucrat(const std::string name, int grade) : name(name){
     if (grade < 1)
         throw GradeTooHighException();
     this->grade = grade;
-    std::cout << "Bureaucrat Parameter constructor called!\n";
+    // std::cout << "Bureaucrat Parameter constructor called!\n";
 }
 
 std::ostream& operator<<(std::ostream& out , Bureaucrat bureau){
@@ -66,5 +66,5 @@ std::ostream& operator<<(std::ostream& out , Bureaucrat bureau){
 
 Bureaucrat::Bureaucrat(Bureaucrat &to_cpy) : name(to_cpy.name){
     this->grade = to_cpy.grade;
-    std::cout << "Bureaucrat copy constructore called!\n";
+    // std::cout << "Bureaucrat copy constructore called!\n";
 }

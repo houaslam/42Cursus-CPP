@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/28 16:20:51 by houaslam          #+#    #+#             */
-/*   Updated: 2023/09/14 12:03:34 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/10/12 18:53:16 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,22 +16,29 @@ void Bureaucrat::increment(){
     if (this->grade > 1)
         this->grade--;
     else
-        throw "grade is too high\n";
+        throw GradeTooHighException();
+}
+
+void Bureaucrat::signForm(Form &form){
+    if (form.GetSignStatus() == true)
+        std::cout << this->getName() << " signed " << form.GetName() << std::endl;
+    else
+        std::cout << this->getName() << " couldn t sign " << form.GetName() << " because the grade ain t enough\n";
 }
 
 void Bureaucrat::decrement(){
         if (this->grade < 150)
             this->grade++;
         else
-            throw "the grade is too low\n";
+            throw GradeTooLowException();
     }
 
-const char *GradeTooHighException::what(){
-    return "grade is too high\n";
+const char *Bureaucrat::GradeTooHighException::what(){
+    return "bureaucrat grade is too high\n";
 }
 
-const char *GradeTooLowException::what(){
-        return "grade is too low\n";
+const char *Bureaucrat::GradeTooLowException::what(){
+        return "bureaucrat grade is too low\n";
 }
 
 std::string Bureaucrat::getName() const{
@@ -64,14 +71,7 @@ std::ostream& operator<<(std::ostream& out , Bureaucrat bureau){
     return out;
 }
 
-void Bureaucrat::signForm(Form &form){
-    if (form.GetSignStatus() == true)
-        std::cout << this->getName() << " signed " << form.GetName() << std::endl;
-    else
-        std::cout << this->getName() << " couldn t sign " << form.GetName() << " because the grade ain t enough\n";
-}
-
 Bureaucrat::Bureaucrat(Bureaucrat &to_cpy) : name(to_cpy.name){
     this->grade = to_cpy.grade;
-    std::cout << "Bureaucrat copy constructore called!\n";
+    // std::cout << "Bureaucrat copy constructore called!\n";
 }

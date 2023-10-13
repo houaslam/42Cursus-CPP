@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/28 16:20:51 by houaslam          #+#    #+#             */
-/*   Updated: 2023/09/29 17:21:55 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/10/13 14:03:40 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,11 @@ void Bureaucrat::decrement(){
             throw "the grade is too low\n";
     }
 
-const char *GradeTooHighException::what(){
+const char *Bureaucrat::GradeTooHighException::what(){
     return "grade is too high\n";
 }
 
-const char *GradeTooLowException::what(){
+const char *Bureaucrat::GradeTooLowException::what(){
         return "grade is too low\n";
 }
 
@@ -86,5 +86,5 @@ void Bureaucrat::executeForm(AForm const &form){
 
 Bureaucrat::Bureaucrat(Bureaucrat &to_cpy) : name(to_cpy.name){
     this->grade = to_cpy.grade;
-    std::cout << "Bureaucrat copy constructore called!\n";
+    // std::cout << "Bureaucrat copy constructore called!\n";
 }
