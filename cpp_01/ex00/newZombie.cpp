@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 17:55:19 by houaslam          #+#    #+#             */
-/*   Updated: 2023/08/04 07:52:57 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/10/14 15:01:15 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,5 @@ Zombie* newZombie(std::string name )
         exit(0);
     }
     return(obj);
+    
 }

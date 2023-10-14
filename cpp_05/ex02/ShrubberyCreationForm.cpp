@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 16:00:45 by houaslam          #+#    #+#             */
-/*   Updated: 2023/10/12 18:23:35 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/10/14 15:17:36 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ void ShrubberyCreationForm::execute(Bureaucrat const &executor) const{
     my_stream << "         |  | " << std::endl;
     my_stream << "         |  | " << std::endl;
     my_stream << "  ______/____\\____ " << std::endl;
+    std::cout << executor.getName() + "_shrubbery" << " file was created\n";
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm &pard)
