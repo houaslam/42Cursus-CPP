@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 17:49:03 by houaslam          #+#    #+#             */
-/*   Updated: 2023/09/29 17:22:23 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/10/14 18:12:53 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ ScalarConveter& ScalarConveter::operator=(ScalarConveter &to_cpy){
 ScalarConveter::~ScalarConveter(){
 	std::cout << "Scalar Destructore called!\n";
 }
-
 
 void ScalarConveter::method(const char* base){
     std::cout << std::fixed << std::setprecision(2);

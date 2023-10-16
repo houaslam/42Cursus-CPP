@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 12:59:39 by houaslam          #+#    #+#             */
-/*   Updated: 2023/09/18 19:04:19 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/10/16 16:48:50 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,10 @@ int main()
 {
     Data data("HELLO\n");
     Data *res;
+    uintptr_t nb;
     std::cout << "name = " << data.name << std::endl;
-    res = Serializer::deserialize(Serializer::serialize(&data));
+    nb = Serializer::serialize(&data);
+    std::cout << "nb = " << nb << std::endl;
+    res = Serializer::deserialize(nb);
     std::cout << "res = " << res->name << std::endl;
 }

@@ -6,7 +6,7 @@
 #    By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/28 16:20:04 by houaslam          #+#    #+#              #
-#    Updated: 2023/09/18 13:03:31 by houaslam         ###   ########.fr        #
+#    Updated: 2023/10/16 16:47:43 by houaslam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,7 @@ EXTRA_CFLAGS = -std=c++98
 
 SRC = main.cpp \
 	Serializer.cpp\
+	Data.cpp\
 
 OBJ = ${SRC:.cpp=.o}
 

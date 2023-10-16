@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 16:00:45 by houaslam          #+#    #+#             */
-/*   Updated: 2023/10/14 15:17:36 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/10/16 13:19:07 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,8 @@ void ShrubberyCreationForm::execute(Bureaucrat const &executor) const{
 	if (this->GetSignStatus() != true)
         throw FormNotSigned();
     if (executor.getGrade() <= this->GetExec())
-        my_stream.open(executor.getName() + "_shrubbery");
-    else
     {
-        std::cout << "shrubby failed" << std::endl;
-        exit(1);
-    }
+        my_stream.open(executor.getName() + "_shrubbery");
     my_stream << "    oxoxoo    ooxoo "  << std::endl;
     my_stream << "  ooxoxo oo  oxoxooo " << std::endl;
     my_stream << " oooo xxoxoo ooo ooox " << std::endl;
@@ -37,6 +33,9 @@ void ShrubberyCreationForm::execute(Bureaucrat const &executor) const{
     my_stream << "         |  | " << std::endl;
     my_stream << "  ______/____\\____ " << std::endl;
     std::cout << executor.getName() + "_shrubbery" << " file was created\n";
+    }
+    else
+        throw GradeTooHighException(); 
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm &pard)
