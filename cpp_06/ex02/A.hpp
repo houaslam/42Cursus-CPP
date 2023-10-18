@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 19:25:18 by houaslam          #+#    #+#             */
-/*   Updated: 2023/09/18 19:36:36 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/10/18 16:32:07 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include "Base.hpp"
 
 class A : public Base{
-    public :
+public :
     A();
 };
 

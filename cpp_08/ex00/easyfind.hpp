@@ -28,4 +28,13 @@ int easyfind(container& elem, int b){
     throw ElementNotFound();
 }
 
+template <typename container>
+void    isItFound(container& arr ,int k){
+    try {
+        std::cout << easyfind(arr, k) << std::endl; }
+    catch(std::exception &exp){
+        std::cerr << exp.what() << std::endl;
+    }
+}
+
 #endif

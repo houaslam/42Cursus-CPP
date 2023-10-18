@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 12:59:42 by houaslam          #+#    #+#             */
-/*   Updated: 2023/09/19 12:17:45 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/10/18 16:27:37 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,6 @@
 
 Serializer::Serializer(){
 	std::cout << "Serializer Default constructore called!\n";
-}
-
-Serializer::~Serializer(){
-	std::cout << "Serializer Destructore called!\n";
-}
-
-Serializer::Serializer(Serializer &to_cpy){
-	*this= to_cpy;
-}
-
-Serializer& Serializer::operator=(Serializer& to_cpy){
-	return *this;
 }
 
 uintptr_t Serializer::serialize(Data* ptr){

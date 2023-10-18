@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 17:29:00 by houaslam          #+#    #+#             */
-/*   Updated: 2023/10/16 16:45:27 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/10/18 15:51:26 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 struct Data{
 public:
     std::string name;
+//CANONICAL FORM
     Data(std::string name);
     Data();
     Data& operator=(Data& src);
