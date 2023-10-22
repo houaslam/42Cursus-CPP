@@ -1,25 +1,14 @@
 #include "iter.hpp"
 #include <string.h>
 
-template< typename T >
-void aff( T& x )
-{
-  std::cout << x << std::endl;
-  return;
-}
-
-template <typename T>
-void add(T &nb){
-  nb += 1;
-}
 
 int main(){
   int t[5] = {0,2,4,5,9};
   char c[] = "hello";
   int k = 0;
 
-  iter<int>(t, 5, add);
-  iter<char>(c, 5, add);
+  iter<int>(t, 5, add<int>);
+  iter<char>(c, 5, add<char>);
 
   while(k < 5)
     std::cout << t[k++] << "\t";

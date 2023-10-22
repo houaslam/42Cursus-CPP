@@ -6,7 +6,7 @@
 #    By: hajarouaslam <hajarouaslam@student.42.f    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/28 16:20:04 by houaslam          #+#    #+#              #
-#    Updated: 2023/09/23 13:03:41 by hajarouasla      ###   ########.fr        #
+#    Updated: 2023/10/22 11:58:24 by hajarouasla      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,10 +23,10 @@ OBJ = ${SRC:.cpp=.o}
 all : ${NAME}
 
 %.o : %.cpp
-	c++ -c $< -o $@
+	c++  ${CFLAGS} ${EXTRA_CFLAGS} -c  $< -o $@
 
 ${NAME} : ${OBJ}
-	${CC} ${CFLAGS} ${EXTRA_CFLAGS} ${OBJ} -o ${NAME}
+	${CC} ${OBJ} -o ${NAME}
 
 clean :
 	rm -rf ${OBJ}

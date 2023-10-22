@@ -4,12 +4,6 @@
 #include <iostream>
 #include <exception>
 
-class invalid_argument : public std::exception{
-public :
-	const char *what(){
-		return "invalid argument";
-	}
-};
 
 template <typename T>
 class Array{
@@ -35,6 +29,12 @@ public :
 		delete[] array;
 	};
 
+	class invalid_argument : public std::exception{
+	public :
+		const char *what() const _NOEXCEPT{
+			return "invalid argument";
+		}
+	};
 	Array& operator=(const Array& princ){
 		int k = 0;
 		this->size_ = princ.size();
@@ -47,7 +47,7 @@ public :
 	}
 
 // REGULAR FUNCTION
-	T& operator[](int k){
+	T& operator[](unsigned int k){
 		if (k >= size_)
 			throw invalid_argument();
 		return this->array[k];

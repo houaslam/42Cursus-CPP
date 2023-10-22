@@ -11,10 +11,10 @@ OBJ = ${SRC:.cpp=.o}
 all : ${NAME}
 
 %.o : %.cpp
-	c++ -c $< -o $@
+	c++ ${CFLAGS} ${EXTRA_CFLAGS} -c $< -o $@
 
 ${NAME} : ${OBJ}
-	${CC} ${CFLAGS} ${EXTRA_CFLAGS} ${OBJ} -o ${NAME}
+	${CC}  ${OBJ} -o ${NAME}
 
 clean :
 	rm -rf ${OBJ}

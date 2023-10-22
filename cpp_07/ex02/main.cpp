@@ -14,7 +14,7 @@ int main(int, char**)
     std::cout << obj[0] << std::endl << c_obj[2] << std::endl;
     std::cout << obj[9] << std::endl << c_obj[13];
     }
-    catch (invalid_argument &exp){
+    catch (std::exception &exp){
         std::cerr << exp.what();
     }
 }
