@@ -6,11 +6,11 @@
 #    By: hajarouaslam <hajarouaslam@student.42.f    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/28 16:20:04 by houaslam          #+#    #+#              #
-#    Updated: 2023/10/24 22:50:45 by hajarouasla      ###   ########.fr        #
+#    Updated: 2023/10/25 20:34:09 by hajarouasla      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Stack
+NAME = btc
 CC = c++
 CC += -fsanitize=address -g3
 CFLAGS = -Wall -Wextra -Werror

@@ -8,10 +8,6 @@
 #include <algorithm>
 #include <exception>
 
-class NoSpaceLeft: public std::exception{
-public :
-    const char *what();
-};
 
 class Span{
 private :
@@ -28,6 +24,10 @@ public :
     int shortestSpan();
     int longestSpan();
     void addRange(std::vector<int>::iterator& start, std::vector<int>::iterator& end);
+	class NoSpaceLeft: public std::exception{
+	public :
+		const char *what()const _NOEXCEPT;
+	};
 };
 
 #endif

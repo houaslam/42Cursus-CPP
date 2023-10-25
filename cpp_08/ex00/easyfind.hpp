@@ -11,27 +11,22 @@
 
 class ElementNotFound : public std::exception{
 public :
-    const char *what(){
-        return "element not found\n";
+    const char *what() const  _NOEXCEPT{
+        return "element not found";
     }
 };
 
 template <typename container>
 int easyfind(container& elem, int b){
-    typename container::const_iterator pos = elem.begin();
-    while(pos != elem.end())
-    {
-        if (*pos == b)
-            return *pos;
-        pos++;
-    }
+    if (std::find(elem.begin(), elem.end(), b) != elem.end())
+        return b;
     throw ElementNotFound();
 }
 
 template <typename container>
 void    isItFound(container& arr ,int k){
     try {
-        std::cout << easyfind(arr, k) << std::endl; }
+        std::cout << easyfind(arr, k) << " is found" << std::endl; }
     catch(std::exception &exp){
         std::cerr << exp.what() << std::endl;
     }

@@ -72,7 +72,10 @@
     "concepts": "cpp",
     "*.tcc": "cpp",
     "forward_list": "cpp",
-    "list": "cpp"
+    "list": "cpp",
+    "filesystem": "cpp",
+    "version": "cpp",
+    "charconv": "cpp"
   },
   "C_Cpp_Runner.cCompilerPath": "clang",
   "C_Cpp_Runner.cppCompilerPath": "clang++",
