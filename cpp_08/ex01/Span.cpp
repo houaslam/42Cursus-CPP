@@ -25,7 +25,7 @@ Span& Span::operator=(Span& ref){
 }
 
 const char *Span::NoSpaceLeft::what()const _NOEXCEPT{
-	return "nO sPACE LEFT TO ADD ELEMENT\n";
+	return "NO sPACE LEFT TO ADD ELEMENT\n";
 }
 
 void Span::addNumber(int nb){
