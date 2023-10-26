@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 20:48:46 by houaslam          #+#    #+#             */
-/*   Updated: 2023/10/12 15:44:36 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/10/26 12:51:54 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,11 @@ void Contact::check(std::string  str, int k)
 {
     if (std::cin.eof())
         exit(0);
-    if(str.length() > 9)
-    {
-        str = str.substr(0, 8);
-        str += ".";
+    while (str.empty()){
+        std::cout << "invalid, try again: ";
+        std::getline(std::cin, str);
+        if (std::cin.eof())
+            exit(0);
     }
     set_it(str, k);
 }
@@ -109,6 +110,7 @@ void    PhoneBook::search(Contact *phone)
 
 int main(int ac, char **av)
 {
+    (void)av;
     if (ac == 1)
     {
         std::string command;
