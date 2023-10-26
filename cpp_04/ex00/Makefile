@@ -6,7 +6,7 @@
 #    By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/13 14:57:02 by houaslam          #+#    #+#              #
-#    Updated: 2023/08/28 15:07:48 by houaslam         ###   ########.fr        #
+#    Updated: 2023/10/22 17:30:44 by houaslam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,10 +28,10 @@ OBJ = ${SRCS:.cpp=.o}
 all : ${NAME}
 
 %.o : %.cpp
-	c++ -c $< -o $@
+	c++ ${CFLAGS} ${EXTRA_FLAGS} -c $< -o $@
 
 ${NAME} : ${OBJ}
-	${CC} ${CFLAGS} ${EXTRA_FLAGS} ${OBJ} -o ${NAME}
+	${CC}  ${OBJ} -o ${NAME}
 
 clean :
 	rm -rf ${OBJ}

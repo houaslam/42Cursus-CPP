@@ -1,4 +1,5 @@
 #include "MutantStack.hpp"
+#include <list>
 
 int main()
 {
@@ -23,10 +24,13 @@ int main()
 
     ++it;
     --it;
-
+    int res = 0;
     while (it != ite) {
         std::cout << *it << std::endl;
-        ++it; }
-
-    std::stack<int> s(mstack); return 0;
+        res += *it;
+        ++it;
+    }
+    std::cout << "element addition is : " << res << std::endl;
+    std::stack<int> s(mstack);
+    return 0;
 }

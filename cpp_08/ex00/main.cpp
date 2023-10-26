@@ -14,6 +14,7 @@ int main()
         deq.push_back(i);
         vec.push_back(i++);
     }
+
     isItFound(arr, 9);
     isItFound(deq, 2);
     isItFound(lst, 5);

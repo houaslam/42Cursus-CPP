@@ -15,6 +15,6 @@ int main(int, char**)
     std::cout << obj[9] << std::endl << c_obj[13];
     }
     catch (std::exception &exp){
-        std::cerr << exp.what();
+        std::cerr << exp.what() << std::endl;
     }
 }

@@ -14,11 +14,11 @@ private :
     unsigned long int nb;
     std::vector<int> storage;
 public :
-    Span(int nb);
-    ~Span();
+    Span(unsigned int nb);
     Span();
-    Span(Span& ref);
-    Span& operator=(Span& ref);
+    Span(const Span& ref);
+    Span& operator=(const Span& ref);
+    ~Span();
 
     void addNumber(int nb);
     int shortestSpan();
