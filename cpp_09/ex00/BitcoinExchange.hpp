@@ -12,5 +12,10 @@ class formatNotValid : public std::exception{
     }
 };
 
+class dateNotValid : public std::exception{
+    const char* what() const _NOEXCEPT{
+        return "date is not valid";
+    }
+};
 
 #endif
