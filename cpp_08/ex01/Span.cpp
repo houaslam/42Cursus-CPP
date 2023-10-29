@@ -47,10 +47,10 @@ int Span::shortestSpan(){
 		throw std::out_of_range("operation can`t be done -> size is to low");
 	std::vector<int> c(storage);
 	std::sort(c.begin(), c.end());
-	res = c.at(1) - c.at(0);
+	res = c[1] - c[0];
 	while(k + 1 < size){
-		if (c.at(k + 1) - c.at(k) < res)
-			res = c.at(k + 1) - c.at(k) ;
+		if (c[k + 1] - c[k] < res)
+			res = c[k + 1] - c[k] ;
 		k++;
 	}
 	return (res);
@@ -63,7 +63,7 @@ int Span::longestSpan(){
 		throw std::out_of_range("operation can`t be done -> size is to low");
 	std::vector<int> c(storage);
 	std::sort(c.begin(), c.end());
-	res = c.at(storage.size() - 1) - c.at(0);
+	res = c[storage.size() - 1] - c[0];
 	return (abs(res));
 }
 
