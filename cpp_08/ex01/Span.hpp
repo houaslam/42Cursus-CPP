@@ -3,9 +3,9 @@
 
 #include <iostream>
 #include <vector>
-#include <array>
 #include <stack>
 #include <algorithm>
+#include <climits>
 #include <exception>
 
 
@@ -14,7 +14,7 @@ private :
     unsigned long int nb;
     std::vector<int> storage;
 public :
-    Span(unsigned int nb);
+    Span(int nb);
     Span();
     Span(const Span& ref);
     Span& operator=(const Span& ref);
@@ -26,7 +26,7 @@ public :
     void addRange(std::vector<int>::iterator& start, std::vector<int>::iterator& end);
 	class NoSpaceLeft: public std::exception{
 	public :
-		const char *what()const _NOEXCEPT;
+		const char *what()const throw();
 	};
 };
 

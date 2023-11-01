@@ -10,7 +10,6 @@
 template <class container>
 int easyfind(container& elem, int b){
     typename container::iterator res = elem.begin();
-    // typename container::iterator res = std::find(elem.begin(), elem.end(), b);
     while (res != elem.end())
     {
         if (*res == b)
@@ -23,7 +22,8 @@ int easyfind(container& elem, int b){
 template <typename container>
 void    isItFound(container& arr ,int k){
     try {
-        std::cout << easyfind<container>(arr, k) << " is found" << std::endl; }
+        std::cout << easyfind<container>(arr, k) << " is found" << std::endl;
+    }
     catch(std::exception &exp){
         std::cerr << exp.what() << std::endl;
     }

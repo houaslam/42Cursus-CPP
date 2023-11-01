@@ -1,9 +1,14 @@
 #include "Span.hpp"
 
-Span::Span(unsigned int nb) : nb(nb){
-	if(nb < 0)
-		throw std::invalid_argument("size should be a positive num");
-	std::cout << "Span parameter constructor called!\n";
+Span::Span(int nb){
+	this->nb = 0;
+	if (nb < 0){
+		std::cout << "size should be positive\n";
+	}
+	else{
+		this->nb = nb;
+		std::cout << "Span parameter constructor called with size: " << nb << std::endl;
+	}
 }
 
 Span::~Span(){
@@ -21,11 +26,8 @@ Span::Span(const Span& ref){
 Span& Span::operator=(const Span& ref){
 	std::cout << "assingnment operator called!\n";
 	this->nb = ref.nb;
+	this->storage = ref.storage;
 	return *this;
-}
-
-const char *Span::NoSpaceLeft::what()const _NOEXCEPT{
-	return "No space left";
 }
 
 void Span::addNumber(int nb){
@@ -34,8 +36,9 @@ void Span::addNumber(int nb){
 		this->storage.push_back(nb);
 		std::cout << nb << " added successfully\n";
 	}
-	else 
-		throw NoSpaceLeft();
+	else{
+		std::cout << "no space left\n";
+	}
 }
 
 int Span::shortestSpan(){
@@ -44,7 +47,10 @@ int Span::shortestSpan(){
 	unsigned int k = 0;
 
 	if(this->storage.size() < 2)
-		throw std::out_of_range("operation can`t be done -> size is to low");
+	{
+		std::cout << "operation can`t be done -> size is to low";
+		return -1;
+	}
 	std::vector<int> c(storage);
 	std::sort(c.begin(), c.end());
 	res = c[1] - c[0];
@@ -60,7 +66,10 @@ int Span::longestSpan(){
 	int res;
 
 	if(this->storage.size() < 2)
-		throw std::out_of_range("operation can`t be done -> size is to low");
+	{
+		std::cout << "operation can`t be done -> size is to low";
+		return -1;
+	}
 	std::vector<int> c(storage);
 	std::sort(c.begin(), c.end());
 	res = c[storage.size() - 1] - c[0];

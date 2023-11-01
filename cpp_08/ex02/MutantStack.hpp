@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   MutantStack.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hajarouaslam <hajarouaslam@student.42.f    +#+  +:+       +#+        */
+/*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 18:18:40 by houaslam          #+#    #+#             */
-/*   Updated: 2023/10/29 13:00:10 by hajarouasla      ###   ########.fr       */
+/*   Updated: 2023/11/01 18:26:10 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,7 @@ class MutantStack : public std::stack<T, Container>{
 	public :
 	MutantStack(){};
 	~MutantStack(){};
-	MutantStack(MutantStack& ref){
-		*this = ref;
-	};
+	MutantStack(const MutantStack<T, Container>& ref): std::stack<T, Container>(ref){};
 	MutantStack& operator=(MutantStack& ref){
 		this->c = ref.c;
 		return *this;
