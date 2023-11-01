@@ -1,15 +1,5 @@
 #include "BitcoinExchange.hpp"
 
-
-void checkDate(std::string str){
-    std::string year = str.substr(0, 4);
-    std::string month = str.substr(5, 2);
-    std::string day = str.substr(8, 2);
-    std::atoi(year.c_str());
-    std::atoi(month.c_str());
-    std::atoi(day.c_str());
-}
-
 void    checkFormat(std::string str){
     std::string format = "0000-00-00 | ";
 	int k = 0;
@@ -31,6 +21,7 @@ void    checkFormat(std::string str){
 
 int main(int ac, char **av){
     if (ac == 2){
+        Bitcoin btc;
         std::string str;
         std::ifstream file;
         file.open(av[1]);
@@ -38,8 +29,7 @@ int main(int ac, char **av){
         while(std::getline(file, str, '\n')){
         try{
             checkFormat(str);
-            checkDate(str);
-            std::cout << "GOOD\n";
+            btc.fillDate(str);
         }
         catch(std::exception &e){
             std::cout << e.what() << std::endl;

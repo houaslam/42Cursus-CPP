@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/05 08:14:27 by houaslam          #+#    #+#             */
-/*   Updated: 2023/08/09 07:19:59 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/11/01 17:26:53 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,6 +130,7 @@ Fixed& Fixed::operator++( void )
 
 Fixed& Fixed::operator++( int nb )
 {
+    nb = 1;
     this->store += nb;
     return( *this);
 }
@@ -142,6 +143,7 @@ Fixed& Fixed::operator--( void )
 
 Fixed& Fixed::operator--( int nb )
 {
+    nb = 1;
         this->store -= nb;
     return( *this);
 }

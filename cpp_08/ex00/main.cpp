@@ -1,5 +1,6 @@
 #include "easyfind.hpp"
 
+
 int main()
 {
     int i = 0;
@@ -14,7 +15,7 @@ int main()
         vec.push_back(i++);
     }
 
-    isItFound(deq, 2);
-    isItFound(lst, 5);
-    isItFound(vec, 3);
+    isItFound<std::deque<int> >(deq, 2);
+    isItFound<std::list<int> >(lst, 5);
+    isItFound<std::vector<int> >(vec, 3);
 }

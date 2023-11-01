@@ -3,17 +3,17 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: hajarouaslam <hajarouaslam@student.42.f    +#+  +:+       +#+         #
+#    By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/28 16:20:04 by houaslam          #+#    #+#              #
-#    Updated: 2023/10/24 15:41:56 by hajarouasla      ###   ########.fr        #
+#    Updated: 2023/11/01 16:40:53 by houaslam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = easyfind
-CC = c++
-CC += -fsanitize=address -g3
-CFLAGS = -Wall -Wextra -Werror
+CCPP = c++
+CCPP += -fsanitize=address -g3
+CPPFLAGS = -Wall -Wextra -Werror
 EXTRA_CFLAGS = -std=c++98
 
 SRC = main.cpp 
@@ -23,10 +23,10 @@ OBJ = ${SRC:.cpp=.o}
 all : ${NAME}
 
 %.o : %.cpp
-	c++ ${CFLAGS} ${EXTRA_CFLAGS} -c $< -o $@
+	c++ ${CPPFLAGS} ${EXTRA_CFLAGS} -c $< -o $@
 
 ${NAME} : ${OBJ}
-	${CC} ${OBJ} -o ${NAME}
+	${CCPP} ${OBJ} -o ${NAME}
 
 clean :
 	rm -rf ${OBJ}

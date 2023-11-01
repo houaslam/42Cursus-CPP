@@ -2,31 +2,28 @@
 #define EASY_FIND_HPP   
 
 #include <iostream>
-#include <array>
 #include <vector>
 #include <list>
-#include <deque>
-#include <forward_list>	
+#include <deque>	
 #include <exception>
 
-class ElementNotFound : public std::exception{
-public :
-    const char *what() const  _NOEXCEPT{
-        return "element not found";
-    }
-};
-
-template <typename container>
+template <class container>
 int easyfind(container& elem, int b){
-    if (std::find(elem.begin(), elem.end(), b) != elem.end())
-        return b;
-    throw ElementNotFound();
+    typename container::iterator res = elem.begin();
+    // typename container::iterator res = std::find(elem.begin(), elem.end(), b);
+    while (res != elem.end())
+    {
+        if (*res == b)
+            return b;
+        res++;
+    }
+    throw std::out_of_range("element not found");
 }
 
 template <typename container>
 void    isItFound(container& arr ,int k){
     try {
-        std::cout << easyfind(arr, k) << " is found" << std::endl; }
+        std::cout << easyfind<container>(arr, k) << " is found" << std::endl; }
     catch(std::exception &exp){
         std::cerr << exp.what() << std::endl;
     }

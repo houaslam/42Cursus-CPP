@@ -6,28 +6,32 @@
 #    By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/05 08:11:54 by houaslam          #+#    #+#              #
-#    Updated: 2023/08/06 15:47:12 by houaslam         ###   ########.fr        #
+#    Updated: 2023/11/01 17:23:54 by houaslam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = fixed
-CC = c++ -fsanitize=address -g3
-CFLAGS = -Wall -Wextra -Werror
-EXTRA_FLAGS = -std=c++98
+CCPP = c++ -fsanitize=address -g3
+CPPFLAGS = -Wall -Wextra -Werror
+EXTRA_CFLAGS = -std=c++98
 
-SRCS = main.cpp \
-	   Fixed.cpp
+SRC = main.cpp \
+	Fixed.cpp
 
-OBJ = ${SRCS:.cpp=.o}
+OBJ = ${SRC:.cpp=.o}
 
 all : ${NAME}
 
+%.o : %.cpp
+	c++ ${CPPFLAGS} ${EXTRA_CFLAGS} -c $< -o $@
+
 ${NAME} : ${OBJ}
-	${CC} ${CFLAGS} ${EXTRA_FLAGS} ${OBJ} -o ${NAME}
+	${CCPP} ${OBJ} -o ${NAME}
 
 clean :
-	rm ${OBJ}
+	rm -rf ${OBJ}
+
 fclean : clean
-	rm -f ${NAME}
+	rm -rf ${NAME}
 
 re : fclean all
