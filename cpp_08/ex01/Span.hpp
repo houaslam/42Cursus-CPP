@@ -11,8 +11,8 @@
 
 class Span{
 private :
-    unsigned long int nb;
-    std::vector<int> storage;
+    unsigned int nb;
+    std::vector<unsigned int> storage;
 public :
     Span(int nb);
     Span();
@@ -20,14 +20,10 @@ public :
     Span& operator=(const Span& ref);
     ~Span();
 
-    void addNumber(int nb);
+    void addNumber(long int nb);
     int shortestSpan();
     int longestSpan();
     void addRange(std::vector<int>::iterator& start, std::vector<int>::iterator& end);
-	class NoSpaceLeft: public std::exception{
-	public :
-		const char *what()const throw();
-	};
 };
 
 #endif

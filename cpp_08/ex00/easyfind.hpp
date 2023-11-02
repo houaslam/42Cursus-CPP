@@ -5,18 +5,15 @@
 #include <vector>
 #include <list>
 #include <deque>	
+#include <algorithm>
 #include <exception>
 
 template <class container>
 int easyfind(container& elem, int b){
-    typename container::iterator res = elem.begin();
-    while (res != elem.end())
-    {
-        if (*res == b)
-            return b;
-        res++;
-    }
-    throw std::out_of_range("element not found");
+    typename container::iterator res = std::find(elem.begin(), elem.end(), b);
+    if(res== elem.end())
+        throw std::out_of_range("element not found");
+    return b;
 }
 
 template <typename container>

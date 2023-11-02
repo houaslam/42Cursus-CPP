@@ -30,7 +30,7 @@ Span& Span::operator=(const Span& ref){
 	return *this;
 }
 
-void Span::addNumber(int nb){
+void Span::addNumber(long int nb){
 	if (this->storage.size() < this->nb)
 	{
 		this->storage.push_back(nb);
@@ -48,14 +48,14 @@ int Span::shortestSpan(){
 
 	if(this->storage.size() < 2)
 	{
-		std::cout << "operation can`t be done -> size is to low";
+		std::cout << "operation can`t be done -> size is to low\n";
 		return -1;
 	}
-	std::vector<int> c(storage);
+	std::vector<unsigned int> c(storage);
 	std::sort(c.begin(), c.end());
 	res = c[1] - c[0];
 	while(k + 1 < size){
-		if (c[k + 1] - c[k] < res)
+		if (c[k + 1] - c[k] < (unsigned int)res)
 			res = c[k + 1] - c[k] ;
 		k++;
 	}
@@ -67,13 +67,13 @@ int Span::longestSpan(){
 
 	if(this->storage.size() < 2)
 	{
-		std::cout << "operation can`t be done -> size is to low";
+		std::cout << "operation can`t be done -> size is to low\n";
 		return -1;
 	}
-	std::vector<int> c(storage);
+	std::vector<unsigned int> c(storage);
 	std::sort(c.begin(), c.end());
 	res = c[storage.size() - 1] - c[0];
-	return (abs(res));
+	return (res);
 }
 
 void Span::addRange(std::vector<int>::iterator& start, std::vector<int>::iterator& end)

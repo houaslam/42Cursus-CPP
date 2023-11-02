@@ -2,7 +2,9 @@
 
 
 int main() {
-  Span sp = Span(5);
+try
+{  
+  Span sp = Span(0);
   sp.addNumber(6);
   sp.addNumber(3);
   sp.addNumber(17);
@@ -10,6 +12,9 @@ int main() {
   sp.addNumber(11);
   std::cout << sp.shortestSpan() << std::endl;
   std::cout << sp.longestSpan() << std::endl;
-return 0;
+}
+catch(std::exception& e){
+  std::cout << e.what() << std::endl;
+}
 }
 
