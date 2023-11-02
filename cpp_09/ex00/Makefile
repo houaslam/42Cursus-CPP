@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: hajarouaslam <hajarouaslam@student.42.f    +#+  +:+       +#+         #
+#    By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/28 16:20:04 by houaslam          #+#    #+#              #
-#    Updated: 2023/10/25 20:34:09 by hajarouasla      ###   ########.fr        #
+#    Updated: 2023/11/02 21:06:03 by houaslam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,8 @@ CC += -fsanitize=address -g3
 CFLAGS = -Wall -Wextra -Werror
 EXTRA_CFLAGS = -std=c++98
 
-SRC = main.cpp
+SRC = main.cpp \
+	BitcoinExchange.cpp
 
 OBJ = ${SRC:.cpp=.o}
 

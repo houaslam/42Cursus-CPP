@@ -9,6 +9,7 @@
 #include <iostream>
 #include <iomanip>
 #include <climits>
+#include <stdexcept>
 
 
 class Bitcoin{
@@ -25,23 +26,8 @@ class Bitcoin{
     // REGULAR FUNCTION
     void    checkFormat(std::string str);
     void    fillDate(std::string str);
+	void	display(void);
 
-    // EXCEPTION
-    class numberNotPositive : public std::exception{
-        const char* what() const _GLIBCXX_TXN_SAFE_DYN _GLIBCXX_NOTHROW;
-    };
-
-    class numberTooLarge : public std::exception{
-        const char* what() const _GLIBCXX_TXN_SAFE_DYN _GLIBCXX_NOTHROW;
-    };
-
-    class formatNotValid : public std::exception{
-        const char* what() const _GLIBCXX_TXN_SAFE_DYN _GLIBCXX_NOTHROW;
-    };
-
-    class dateNotValid : public std::exception{
-        const char* what() const _GLIBCXX_TXN_SAFE_DYN _GLIBCXX_NOTHROW;
-    };
 };
 
 

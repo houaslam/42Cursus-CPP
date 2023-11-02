@@ -6,18 +6,18 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 17:35:16 by houaslam          #+#    #+#             */
-/*   Updated: 2023/10/31 18:00:09 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/11/02 21:19:59 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "BitcoinExchange.hpp"
 
 Bitcoin::Bitcoin(){
-	std::cout << "Bitcoin Default constructor called\n";
+	// std::cout << "Bitcoin Default constructor called\n";
 }
 
 Bitcoin::~Bitcoin(){
-	std::cout << "Bitcoin Default destructor called\n";
+	// std::cout << "Bitcoin Default destructor called\n";
 }
 
 Bitcoin::Bitcoin(Bitcoin& org){
@@ -25,9 +25,21 @@ Bitcoin::Bitcoin(Bitcoin& org){
 }
 
 Bitcoin& Bitcoin::operator=(Bitcoin& org){
-	this->holder = org
+    if (this == &org)
+        return *this;
+	this->holder = org.holder;
+    return *this;
 }
 
+void Bitcoin::display(void)
+{
+	std::map<std::string, int>::iterator it = holder.begin();
+    while(it != holder.end()){
+        std::cout << it->first << " : " << it->second << std::endl;
+        it++;
+    }
+
+}
 
 void Bitcoin::fillDate(std::string str){
     std::string year = str.substr(0, 4);
@@ -40,24 +52,9 @@ void Bitcoin::fillDate(std::string str){
     int d = std::atoi(day.c_str());
     double v = std::atof(value.c_str());
 
-    if (y < 2005 || d < 0 || m < 0 || d > 32 || m > 13 || v < 0 || v > INT_MAX)
-        throw dateNotValid();
-    this->older[str.substr(0, 10).c_str()] = v;
+    if (y < 2005 || d <= 0 || m <= 0 || d > 32 || m > 13 || v <= 0 || v > INT_MAX)
+        throw std::out_of_range("date is not valid");
+    this->holder[str.substr(0, 10).c_str()] = v;
 }
 
-const char* Bitcoin::what() const _GLIBCXX_TXN_SAFE_DYN _GLIBCXX_NOTHROW{
-    return "number not positive";
-}
-
-const char* Bitcoin::what() const _GLIBCXX_TXN_SAFE_DYN _GLIBCXX_NOTHROW{
-    return "too large number";
-}
-
-const char* Bitcoin::what() const _GLIBCXX_TXN_SAFE_DYN _GLIBCXX_NOTHROW{
-    return "format is not valid";
-}
-
-const char* Bitcoin::what() const _GLIBCXX_TXN_SAFE_DYN _GLIBCXX_NOTHROW{
-    return "date is not valid";
-}
 
