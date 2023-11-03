@@ -19,33 +19,26 @@ void    checkFormat(std::string str){
 	}
 }
 
-
-
 int main(int ac, char **av){
     if (ac == 2){
         Bitcoin btc;
         std::string str;
         std::ifstream file;
-        file.open(av[1]);
 
+        file.open(av[1]);
+        std::getline(file, str, '\n');
+		btc.fillData();
         while(std::getline(file, str, '\n'))
 		{
         	try{
         	    checkFormat(str);
-        	    btc.fillDate(str);
+        	    btc.checkValue(str);
         	}
         	catch(std::exception &e){
         	    std::cout << e.what() << std::endl;
         	}
-			std::cout << "GOOD\n";
+			// std::cout << "GOOD\n";
         }
-		btc.display();
+		// btc.display();
     }
 }
-
-/*
-2011-01-03 | | 3
-2011-01-03 | 3   |
-2007-01-01 | 3+3 
-
-*/

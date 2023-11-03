@@ -9,12 +9,15 @@
 #include <iostream>
 #include <iomanip>
 #include <climits>
+#include <algorithm>
 #include <stdexcept>
+#include <string>
+#include <bits/stdc++.h> 
 
 
 class Bitcoin{
     private :
-        std::map<std::string, int> holder;
+        std::map<std::string, double> holder;
     public :
     // CANONICAL FORM
     Bitcoin();
@@ -24,9 +27,9 @@ class Bitcoin{
 
 
     // REGULAR FUNCTION
-    void    checkFormat(std::string str);
-    void    fillDate(std::string str);
+    void    fillData();
 	void	display(void);
+    void    checkValue(std::string str);
 
 };
 
