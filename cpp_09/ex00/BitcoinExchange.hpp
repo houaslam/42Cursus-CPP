@@ -12,7 +12,6 @@
 #include <algorithm>
 #include <stdexcept>
 #include <string>
-#include <bits/stdc++.h> 
 
 
 class Bitcoin{

@@ -6,14 +6,14 @@ void    checkFormat(std::string str){
 	while(k < 13){
 		if ((format[k] == '-' || format[k] == ' ' || format[k] == '|' )){
             if (format[k] != str[k])
-			    throw std::runtime_error("date is not valid");
+			    throw std::runtime_error("bad input");
             else
 		        format[k] = str[k];
         }
         else if(str[k] >= '0' && str[k] <= '9')
 		    format[k] = str[k];
         else{
-			throw std::runtime_error("date is not valid");
+			throw std::runtime_error("date not valid");
         }
         k++;
 	}
@@ -37,8 +37,7 @@ int main(int ac, char **av){
         	catch(std::exception &e){
         	    std::cout << e.what() << std::endl;
         	}
-			// std::cout << "GOOD\n";
         }
-		// btc.display();
     }
 }
+

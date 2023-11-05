@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 17:35:16 by houaslam          #+#    #+#             */
-/*   Updated: 2023/11/03 18:07:20 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/11/04 13:50:49 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,16 +27,6 @@ Bitcoin::Bitcoin(Bitcoin& org){
 Bitcoin& Bitcoin::operator=(Bitcoin& org){
 	this->holder = org.holder;
     return *this;
-}
-
-void Bitcoin::display(void)
-{
-	std::map<std::string, double>::iterator it = holder.begin();
-    while(it != holder.end()){
-        std::cout << std::fixed << std::setprecision(3) << it->first << " : " << it->second << std::endl;
-        it++;
-    }
-
 }
 
 void    Bitcoin::checkValue(std::string str){
@@ -61,11 +51,12 @@ void    Bitcoin::checkValue(std::string str){
 
         throw std::out_of_range("date is not valid");
 	}
-    std::map<std::string, double>::iterator it = std::lower_bound(holder.begin(), holder.end(), str.substr(0, 10)); 
-	std::cout << std::fixed << std::setprecision(3) << str.substr(0, 11) << " => " << \
-	it->second * v<< std::endl;
-    // std::cout << std::fixed << std::setprecision(3) << str.substr(0, 11) << " => " << 
-	// holder[str.substr(0, 10)] * v<< std::endl;
+    
+    std::map<std::string, double>::iterator it = holder.upper_bound(str.substr(0, 10)); 
+    it--;
+    // << std::fixed << std::setprecision(3) 
+	std::cout << str.substr(0, 11) << " => ";
+	std::cout << it->second * v << std::endl;
 
 }
 
