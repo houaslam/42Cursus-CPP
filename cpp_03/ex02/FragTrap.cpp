@@ -6,13 +6,13 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/10 10:25:47 by houaslam          #+#    #+#             */
-/*   Updated: 2023/08/11 13:57:41 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/11/05 13:13:41 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap(std::string name)
+FragTrap::FragTrap(std::string name) : ClapTrap(name)
 {
     this->name = name;
     hit = 100;
@@ -21,9 +21,8 @@ FragTrap::FragTrap(std::string name)
     std::cout <<  "FragTrap parameters constructore is called!\n";
 }
 
-FragTrap::FragTrap(FragTrap& tocpy)
+FragTrap::FragTrap(FragTrap& tocpy) : ClapTrap(tocpy)
 {
-    *this = tocpy;
     std::cout << "FragTrap copy constructor called\n";
 }
 

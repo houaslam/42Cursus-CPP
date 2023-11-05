@@ -6,27 +6,25 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/11 17:30:10 by houaslam          #+#    #+#             */
-/*   Updated: 2023/11/04 18:45:24 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/11/05 13:20:48 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
 
-DiamondTrap::DiamondTrap(std::string name)
+DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name), ScavTrap(name),  FragTrap(name)
 {
 	this->name = name;
 	ClapTrap::name = name + "_clap_name";
-	std::cout << "name " << this->name << std::endl;
 	this->hit = FragTrap::hit;
-	std::cout << "hit point = " << FragTrap::hit << std::endl;
+	std::cout << "HIT = " << this->hit << std::endl;
 	this->energy = ScavTrap::energy;
 	this->damage = FragTrap::damage;
 	std::cout << "DiamondTrap parametrs constructor called\n";
 }
 
-DiamondTrap::DiamondTrap(DiamondTrap& tocpy)
+DiamondTrap::DiamondTrap(DiamondTrap& tocpy) : ClapTrap(tocpy) , ScavTrap(tocpy),  FragTrap(tocpy)
 {
-	*this = tocpy;
     std::cout << "DiamondTrap copy constructor called\n";
 }
 

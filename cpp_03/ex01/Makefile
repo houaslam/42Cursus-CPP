@@ -6,7 +6,7 @@
 #    By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/12 10:57:27 by houaslam          #+#    #+#              #
-#    Updated: 2023/06/12 10:57:51 by houaslam         ###   ########.fr        #
+#    Updated: 2023/11/05 13:11:45 by houaslam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,17 +19,20 @@ EXTRA_FLAGS = -std=c++98
 SRCS = main.cpp \
 	   ClapTrap.cpp \
 	   ScavTrap.cpp
-
 OBJ = ${SRCS:.cpp=.o}
 
 all : ${NAME}
 
+%.o : %.cpp
+	c++ ${CFLAGS} ${EXTRA_CFLAGS} -c $< -o $@
+
 ${NAME} : ${OBJ}
-	${CC} ${CFLAGS} ${EXTRA_FLAGS} ${OBJ} -o ${NAME}
+	${CC} ${CFLAGS} ${EXTRA_CFLAGS} ${OBJ} -o ${NAME}
 
 clean :
-	rm ${OBJ}
-fclean : clean
-	rm -f ${NAME}
+	rm -rf ${OBJ}
 
-re : fclean all
+fclean : clean
+	rm -rf ${NAME}
+
+re : fclean all*this = tocpy;

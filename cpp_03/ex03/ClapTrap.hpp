@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/11 17:48:19 by houaslam          #+#    #+#             */
-/*   Updated: 2023/06/12 13:19:15 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/11/05 13:14:22 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@
 class ClapTrap{
     protected :
         std::string name;
-        int hit;
-        int energy;
-        int damage;
+        unsigned int hit;
+        unsigned int energy;
+        unsigned int damage;
     
     public :
         // constructor and destructore

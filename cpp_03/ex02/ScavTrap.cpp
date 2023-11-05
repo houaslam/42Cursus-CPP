@@ -6,14 +6,14 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/12 10:42:51 by houaslam          #+#    #+#             */
-/*   Updated: 2023/08/11 14:02:37 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/11/05 13:13:23 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
 // constructor and destructore
-ScavTrap::ScavTrap(std::string name)
+ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
     this->name = name;
     hit = 100;
@@ -27,9 +27,8 @@ ScavTrap::ScavTrap(void)
     std::cout << "ScavTrap default constructor called\n";
 }
 
-ScavTrap::ScavTrap(ScavTrap& tocpy)
+ScavTrap::ScavTrap(ScavTrap& tocpy) : ClapTrap(tocpy)
 {
-    *this = tocpy;
     std::cout << "ScavTrap copy constructor called\n";
 }
 

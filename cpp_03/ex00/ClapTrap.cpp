@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/12 10:42:51 by houaslam          #+#    #+#             */
-/*   Updated: 2023/08/11 13:50:57 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/11/05 13:02:55 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ void ClapTrap::attack(const std::string& target)
 
 void ClapTrap::takeDamage(unsigned int amount)
 {
-    if(this->hit <= amount)
+    if((unsigned int)this->hit <= amount)
     {
         std::cout <<  "ClapTrap " 
         << this->name << " is dead\n";

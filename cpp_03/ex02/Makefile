@@ -6,7 +6,7 @@
 #    By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/12 10:57:27 by houaslam          #+#    #+#              #
-#    Updated: 2023/08/10 10:35:50 by houaslam         ###   ########.fr        #
+#    Updated: 2023/11/05 13:05:46 by houaslam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,12 +25,16 @@ OBJ = ${SRCS:.cpp=.o}
 
 all : ${NAME}
 
+%.o : %.cpp
+	c++ ${CFLAGS} ${EXTRA_CFLAGS} -c $< -o $@
+
 ${NAME} : ${OBJ}
-	${CC} ${CFLAGS} ${EXTRA_FLAGS} ${OBJ} -o ${NAME}
+	${CC} ${CFLAGS} ${EXTRA_CFLAGS} ${OBJ} -o ${NAME}
 
 clean :
-	rm ${OBJ}
+	rm -rf ${OBJ}
+
 fclean : clean
-	rm -f ${NAME}
+	rm -rf ${NAME}
 
 re : fclean all
