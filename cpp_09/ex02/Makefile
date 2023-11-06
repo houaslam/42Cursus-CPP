@@ -3,20 +3,21 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: hajarouaslam <hajarouaslam@student.42.f    +#+  +:+       +#+         #
+#    By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/28 16:20:04 by houaslam          #+#    #+#              #
-#    Updated: 2023/10/24 22:50:45 by hajarouasla      ###   ########.fr        #
+#    Updated: 2023/11/06 15:51:18 by houaslam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Stack
+NAME = PmergeMe
 CC = c++
 CC += -fsanitize=address -g3
 CFLAGS = -Wall -Wextra -Werror
 EXTRA_CFLAGS = -std=c++98
 
-SRC = main.cpp
+SRC = main.cpp \
+	  PmergeMe.cpp
 
 OBJ = ${SRC:.cpp=.o}
 

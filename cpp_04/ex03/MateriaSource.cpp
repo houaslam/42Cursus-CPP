@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/25 03:57:00 by hajarouasla       #+#    #+#             */
-/*   Updated: 2023/08/28 15:22:44 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/11/06 12:56:01 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ AMateria*  MateriaSource::createMateria(std::string const & type){
     {
         if (this->inventory[k] && !this->inventory[k]->getType().compare(type))
         {
-            ret = this->inventory[k]->clone();
+            ret = this->inventory[k]->clone(); // -> ice.clone()
             return (ret);
         }
         k++;

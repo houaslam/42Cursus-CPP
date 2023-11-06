@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/nfs/homes/houaslam/Desktop/CPP/cpp_03/ex03",
-      "program": "/nfs/homes/houaslam/Desktop/CPP/cpp_03/ex03/build/Debug/outDebug",
+      "cwd": "/nfs/homes/houaslam/Desktop/CPP/cpp_09/ex02",
+      "program": "/nfs/homes/houaslam/Desktop/CPP/cpp_09/ex02/build/Debug/outDebug",
       "MIMode": "lldb",
       "miDebuggerPath": "lldb",
       "setupCommands": [
