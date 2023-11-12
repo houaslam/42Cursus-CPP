@@ -6,7 +6,7 @@
 /*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 14:47:25 by houaslam          #+#    #+#             */
-/*   Updated: 2023/11/06 15:35:16 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/11/12 17:41:50 by houaslam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,7 @@ int main(int ac, char **av)
 			else if (nb[i] != 32)
 				exit(1);
         }
-        std::vector<int>::iterator it = holder.begin();
-        while(it != holder.end())
-        	std::cout << "number : " <<  *it++ << std::endl;
+        sort(holder, 0, holder.size());
+        affich(holder, 0, holder.size());
 	}
 }
