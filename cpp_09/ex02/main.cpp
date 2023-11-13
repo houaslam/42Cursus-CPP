@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hajarouaslam <hajarouaslam@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 14:47:25 by houaslam          #+#    #+#             */
-/*   Updated: 2023/11/12 17:41:50 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/11/13 23:06:14 by hajarouasla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@ int main(int ac, char **av)
 {
     if (ac == 2)
 	{
-        std::vector<int> holder;
+        PmergeMe<std::vector<int> > v_holder;
+        PmergeMe<std::deque<int> > l_holder;
         std::string nb = av[1];
 		int k;
 
@@ -27,12 +28,26 @@ int main(int ac, char **av)
 			{	
             	while(isdigit(nb[i]))
                 	i++;
-            	holder.push_back(atoi(nb.substr(k, i - k).c_str()));
+            	v_holder.add_element(atoi(nb.substr(k, i - k).c_str()));
+            	l_holder.add_element(atoi(nb.substr(k, i - k).c_str()));
 			}
 			else if (nb[i] != 32)
 				exit(1);
         }
-        sort(holder, 0, holder.size());
-        affich(holder, 0, holder.size());
+		std::cout << "before : ";
+        l_holder.affich( 0, l_holder._size());
+		// std::cout << "before : ";
+        // v_holder.affich( 0, v_holder._size());
+		
+        v_holder.sort(0, v_holder._size());
+        l_holder.sort(0, l_holder._size());
+		
+		// std::cout << "after :  ";
+        // v_holder.affich( 0, v_holder._size());
+		std::cout << "after :  ";
+        l_holder.affich( 0, l_holder._size());
+
+		// std::cout << "Time to process a range of 5 elements with std::vector : " << << "us";
+		// std::cout << "Time to process a range of 5 elements with std::list : " << << "us";
 	}
 }
