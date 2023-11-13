@@ -3,81 +3,68 @@
 /*                                                        :::      ::::::::   */
 /*   PmergeMe.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: houaslam <houaslam@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hajarouaslam <hajarouaslam@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 14:47:19 by houaslam          #+#    #+#             */
-/*   Updated: 2023/11/12 18:45:52 by houaslam         ###   ########.fr       */
+/*   Updated: 2023/11/13 17:01:59 by hajarouasla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PmergeMe.hpp"
 // MERGE SORT
 // VECTOR VERSION
-
-// void    merge(std::vector<int>& holder){
-    
-// }
-
-
 // INSERT SORT
-
-void swap(int& a, int &b){
-    int tp = b;
-    b = a;
-    a = tp;
-}
 
 std::vector<int> copy_vec(std::vector<int> holder, int s, int e){
     std::vector<int> res;
-    while(s < e){
+    while(s < e)
         res.push_back(holder[s++]);
-    }
     return res;
 }
 
 void    merge_sort(std::vector<int>& holder, int start, int middle, int end){
-    size_t i , j, k;
-    i = j = k = 0;
-    // std::cout << "the whole array ";
-    // affich(holder, start, end); 
+    size_t i , j;
+    i = j =  0;
     std::vector<int> L = copy_vec(holder, start, middle);
     std::vector<int> R = copy_vec(holder, middle, end);
-    std::cout << "left ";
-    affich(L, 0, L.size());
-    std::cout << "right ";
-    affich(R, 0, R.size());
     while(i < L.size() && j < R.size()){
-        // std::cout << "LEFT = " << L[i] << " right = " << R[i] << std::endl;
-        if (L[i] <= R[j]){
-            holder[k] = L[i];
-            i++;
+        if (L[i] <= R[j])
+            holder[start] = L[i++];
+        else
+            holder[start] = R[j++];
+        start++;
+    }
+    while (i < L.size())
+        holder[start++] = L[i++];
+    while (j < R.size())
+        holder[start++] = R[j++];
+}
+
+void insert_sort(std::vector<int>&array, int s, int e){
+    for(int k = s; k + 1< e; k++){
+        int value = array[k + 1];
+        int b = k + 1;
+        while(b > s && value < array[b - 1]){
+            array[b] = array[b - 1];
+            b--;
         }
-        else{
-            holder[k] = R[j];
-            j++;
-        }
+        array[b] = value;
     }
 }
 
-// void insert_sort(std::vector<int>&array, int s, int e){
-// }
-
 void    affich(std::vector<int>& array, int s, int e){
-    std::cout << "| ";
-    // std::cout << "start = " << s << " end = " << e<< "--- | ";
+    // std::cout << "| ";
     while(s < e){
-        std::cout << array[s++] << " | ";
+        std::cout << array[s++] << "  ";
     }
     std::cout << std::endl;
 }
 
 void    sort(std::vector<int>&array, int s, int e){
-    if(e - s <= 2){
-        return ;
-        // insert_sort(array, s, e);
+    if(e - s <= LIMIT){
+        insert_sort(array, s, e);
     }
     else{
-        affich(array, s, e);
         int m = (e + s) / 2;
         sort(array, s, m);
         sort(array, m , e);
